@@ -1,52 +1,53 @@
-.footer{
+.footer {
     width: 100%;
     min-height: 133px;
     background-color: $base-color;
     display: flex;
     justify-content: center;
-    
-    &-wrap{
+
+    &-wrap {
         display: flex;
         width: 1440px;
     }
 
-    .nav{
+    .nav {
         width: 100%;
         min-height: 83px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0 100px 0 82px ;
+        margin: 0 100px 0 82px;
 
-        &__logo{
+        &__logo {
             color: white;
             color: $second-color;
             font-weight: bold;
             font-size: 14px;
             line-height: 16px;
-            font-family: 'FuturaDemiC', sans-serif;
+            font-family: $support-font;
         }
 
-        &-menu{
+        &-menu {
            display: flex;
            justify-content: space-between;
            max-width: 581px;
            flex-grow: 1;
-           &__item{
+
+           &__item {
                color: white;
                text-decoration: none;
                font-size: 14px;
                line-height: 16px;
-               font-family: 'FuturaBookC', sans-serif;
-               &:hover{
-                   color:$second-color;
+               font-family: $subtitle-font;
+
+               &:hover {
+                   color: $second-color;
                    transition: .2s;
                }
-            
-           } 
+           }
         }
 
-        &-wrap{
+        &-wrap {
             display: flex;
             max-width: 332px;
             justify-content: space-between;
@@ -54,7 +55,7 @@
             flex-grow: 1;
         }
 
-        &__phone{
+        &__phone {
             color: white;
             font-size: 14px;
             line-height: 16px;
@@ -63,7 +64,8 @@
             font-weight: bold;
             font-family: 'FuturaDemiC', sans-serif;
         }
-        &__button{
+
+        &__button {
             width: 161px;
             height: 37px;
             font-size: 13px;

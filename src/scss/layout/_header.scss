@@ -4,7 +4,7 @@
     background-color: $base-color;
     display: flex;
     justify-content: center;
-    
+
     &-wrap{
         display: flex;
         width: 1440px;
@@ -27,7 +27,7 @@
             font-family: 'FuturaDemiC', sans-serif;
         }
 
-        &-menu{
+        &-menu {
            display: flex;
            justify-content: space-between;
            max-width: 581px;
@@ -38,12 +38,12 @@
                font-size: 14px;
                line-height: 16px;
                font-family: 'FuturaBookC', sans-serif;
-               &:hover{
+               &:hover, &:focus{
                    color:$second-color;
                    transition: .2s;
                }
-            
-           } 
+
+           }
         }
 
         &-wrap{
