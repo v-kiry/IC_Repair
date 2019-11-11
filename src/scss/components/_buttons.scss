@@ -2,8 +2,27 @@
     padding: 0;
     border: none;
     text-decoration: none;
+    text-transform: uppercase;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
     border-radius: 2px;
-    color: white;
+    color: $paragraph-color;
     background-color: $second-color;
+    font-family: $support-font;
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: bold;
+}
+
+.second-button{
+    padding: 0;
+    border: 2px solid white;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 2px;
+    color: $paragraph-color;
+    background-color: $none-color;
+    font-family: $support-font;
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: bold;
 }

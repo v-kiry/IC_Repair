@@ -1,14 +1,19 @@
 .header-footer {
   width: 100%;
-  min-height: 83px;
   background-color: $base-color;
+
+  &__header {
+    min-height: 83px;
+  }
+
+  &__footer {
+    min-height: 133px;
+  }
 
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
-    margin: auto;
   }
 
   &__logo {
@@ -17,12 +22,18 @@
     font-size: 14px;
     line-height: 16px;
     font-family: $support-font;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover, &:focus {
+      color:$second-color;
+      transition: .2s;
+    }
   }
 
   &-nav {
     width: 100%;
     max-width: 581px;
-    min-height: 83px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,6 +44,7 @@
       font-size: 14px;
       line-height: 16px;
       font-family: $support-font;
+      text-transform: uppercase;
 
       &:hover, &:focus {
         color:$second-color;
@@ -50,7 +62,6 @@
   }
 
   &__phone{
-    color: white;
     font-size: 14px;
     line-height: 16px;
     text-decoration-line: underline;
@@ -63,8 +74,6 @@
     width: 100%;
     max-width: 161px;
     min-height: 37px;
-    font-size: 13px;
-    line-height: 15px;
     font-weight: bold;
     font-family: $support-font;
   }
