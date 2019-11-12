@@ -18,12 +18,10 @@
 
   &__logo {
     color: $second-color;
-    font-weight: bold;
     font-size: 14px;
     line-height: 16px;
     font-family: $support-font;
     text-transform: uppercase;
-    text-decoration: none;
 
     &:hover, &:focus {
       color:$second-color;
@@ -39,11 +37,9 @@
     align-items: center;
 
     &__item {
-      color: white;
-      text-decoration: none;
+      color: $paragraph-color;
       font-size: 14px;
       line-height: 16px;
-      font-family: $support-font;
       text-transform: uppercase;
 
       &:hover, &:focus {
@@ -66,15 +62,11 @@
     line-height: 16px;
     text-decoration-line: underline;
     color: $second-color;
-    font-weight: bold;
-    font-family: $support-font;
   }
 
   &__button{
     width: 100%;
     max-width: 161px;
     min-height: 37px;
-    font-weight: bold;
-    font-family: $support-font;
   }
 }

@@ -10,7 +10,11 @@
     font-family: $support-font;
     font-size: 13px;
     line-height: 15px;
-    font-weight: bold;
+
+    &:hover, &:focus {
+        background-color:#d9aa5f;
+        transition: .2s;
+      }
 }
 
 .second-button{
@@ -24,5 +28,10 @@
     font-family: $support-font;
     font-size: 13px;
     line-height: 15px;
-    font-weight: bold;
+
+    &:hover, &:focus {
+        border-color: $second-color;
+        color: $second-color;
+        transition: .2s;
+      }
 }

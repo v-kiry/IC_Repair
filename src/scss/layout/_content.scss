@@ -10,6 +10,7 @@
       justify-content: center;
       align-items: center;
       max-width: 82px;
+      cursor: pointer;
 
       &__title {
         color: $second-color;
@@ -17,6 +18,10 @@
         transform: rotate(90deg);
         display: flex;
         align-items: center;
+        text-transform: uppercase;
+
+        &:hover, &:focus {
+        }
 
         &::after{
           content: '';
@@ -55,8 +60,6 @@
               display: block;
               color: $paragraph-color;
               font-family: $title-font;
-              font-size: 40px;
-              line-height: 53px;
               text-transform: uppercase;
               margin-bottom: 19px;
           }
@@ -111,9 +114,15 @@
       align-items: center;
       font-size: 14px;
       line-height: 19px;
+      cursor: pointer;
 
-      &__title{
+      &__title {
         margin-right: 12px;
+      }
+
+      &:hover, &:focus {
+        border: 2px solid $second-color;
+        transition: .2s;
       }
     }
 }
