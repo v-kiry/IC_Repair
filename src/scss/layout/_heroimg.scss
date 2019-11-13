@@ -12,6 +12,11 @@
       max-width: 82px;
       cursor: pointer;
 
+      &:hover, &:focus {
+        transition: .2s;
+
+      }
+
       &__title {
         color: $second-color;
         font-family: $support-font;
@@ -19,9 +24,6 @@
         display: flex;
         align-items: center;
         text-transform: uppercase;
-
-        &:hover, &:focus {
-        }
 
         &::after{
           content: '';
@@ -69,7 +71,7 @@
               color: $paragraph-color;
               font-family: $subtitle-font;
               font-size: 22px;
-              line-height: 30px;
+              line-height: 1.4;
           }
 
           &__calculate-btn {
@@ -113,7 +115,7 @@
       justify-content: center;
       align-items: center;
       font-size: 14px;
-      line-height: 19px;
+      line-height: 1.36;
       cursor: pointer;
 
       &__title {
@@ -121,7 +123,6 @@
       }
 
       &:hover, &:focus {
-        border: 2px solid $second-color;
         transition: .2s;
       }
     }
