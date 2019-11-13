@@ -20,9 +20,8 @@ module.exports = {
         }
       },
       {
-        test: /\.scss$/,
+        test: /\.scss$/i,
         use: ['style-loader', MiniCssExtractPlugin.loader,'css-loader','postcss-loader', 'sass-loader']
-          
       },
       {
         test: /\.(png|jpe?g|gif)$/i,

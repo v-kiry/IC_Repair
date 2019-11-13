@@ -1,57 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 
-    <title>Document</title>
+  <title>Document</title>
 </head>
 <body>
-    <header class="header">
-        <div class="header-wrap">
-            <nav class="nav">
-                <div class="nav__logo">IC"REPAIR DESIGN PROJECT"</div>
-                <div class="nav-menu">
-                    <a href="#" class="nav-menu__item">HOME</a>
-                    <a href="#" class="nav-menu__item">PROJECTS</a>
-                    <a href="#" class="nav-menu__item">MEASUREMENT</a>
-                    <a href="#" class="nav-menu__item">TEAM</a>
-                    <a href="#" class="nav-menu__item">REVIEWS</a>
-                    <a href="#" class="nav-menu__item">CONTACTS</a>
-                </div>
-                <div class="nav-wrap">
-                    <div class="nav__phone">+7 (928) 768-32-39</div>
-                    <button class="button nav__button">REQUEST A CALL</button>
-                </div>
-            </nav>
+  <header class="header-footer header-footer__header">
+    <div class="container header-footer__container">
+      <a href="#" class="header-footer__logo">IC"REPAIR DESIGN PROJECT"</a>
+      <nav class="header-footer-nav">
+        <a href="#" class="header-footer-nav__item">Home</a>
+        <a href="#" class="header-footer-nav__item">Projects</a>
+        <a href="#" class="header-footer-nav__item">Measurement</a>
+        <a href="#" class="header-footer-nav__item">Team</a>
+        <a href="#" class="header-footer-nav__item">Reviews</a>
+        <a href="#" class="header-footer-nav__item">Contacts</a>
+      </nav>
+      <div class="header-footer-support-wrap">
+        <a href="#" class="header-footer__phone">+7 (928) 768-32-39</a>
+        <button class="button header-footer__button">Request a call</button>
+      </div>
+    </div>
+  </header>
+  <div class="banner">
+    <div class="banner-instagram">
+      <a href="#" class="banner-instagram__title">Instagram</a>
+    </div>
+    <div class="banner-welcom">
+      <div class="banner-welcom-wrap">
+        <h1 class="banner-welcom-wrap__title">Turnkey Repair in the city of <span class="banner-welcom-wrap__text-decoration">Rostov-on-Don</span></h1>
+        <span class="banner-welcom-wrap__subtitle">Get ready-made turnkey repairs on time
+            with work time saving up to 45 days and 20% from
+            cost of materials due to the organization of work</span>
+        <button class="button banner-welcom-wrap__calculate-btn">Calculate the cost</button>
+        <button class="second-button banner-welcom-wrap__submit-btn">Submit your application</button>
+      </div>
+    </div>
+    <div href = "#" tabindex="0" class="banner-scroll-btn">
+      <div class="banner-scroll-btn__title">Scroll down</div>
+      <img class="banner-scroll-btn__img" src="<%=require('./assets/images/scrolldown.png')%>" alt="scrolldown"></img>
+    </div>
+  </div>
+  <div class="online-control">
+    <div class="container online-control__container">
+      <h3 class="online-control__title">Online control</h3>
+      <div class="online-control__img">
+        <img src="<%=require('./assets/images/camera.png')%>" alt="Camera">
+      </div>
+      <video src="#" class="online-control-palyer">
+        <div class="online-control-palyer__wrap"></div>
+      </video>
+      <span class="online-control__subtitle">At each facility, a camera is installed that broadcasts the progress of work on the clock.
+        At any time, you can go to our website and monitor the progress of work in your apartment.
+        You can watch the live broadcast from one of our facilities!
+        Leave a request below and you will receive a link to the broadcast.</span>
+      <form action="" class="online-control-form">
+        <div class="online-control-form-wrap">
+          <label class="input-lable online-control-form-wrap__input-lable-name">Name
+            <input type="text" placeholder="What is your name:"class="input online-control-form-wrap__input-name"></label>
+          <label class="input-lable online-control-form-wrap__input-lable-phone">Phone
+            <input type="text" placeholder="Your phone number:" class="input online-control-form-wrap__input-phone"></label>
+          <button class="button online-control-form-wrap__btn">Submit</button>
         </div>
-    </header>
-    <main class="content">
-
-    </main>
-    <footer class="footer">
-        <div class="footer-wrap">
-            <nav class="nav">
-                <div class="nav__logo">IC"REPAIR DESIGN PROJECT"</div>
-                <div class="nav-menu">
-                    <a href="#" class="nav-menu__item">HOME</a>
-                    <a href="#" class="nav-menu__item">PROJECTS</a>
-                    <a href="#" class="nav-menu__item">MEASUREMENT</a>
-                    <a href="#" class="nav-menu__item">TEAM</a>
-                    <a href="#" class="nav-menu__item">REVIEWS</a>
-                    <a href="#" class="nav-menu__item">CONTACTS</a>
-                </div>
-                <div class="nav-wrap">
-                    <div class="nav__phone">+7 (928) 768-32-39</div>
-                    <button class="button nav__button">REQUEST A CALL</button>
-                </div>
-            </nav>
-        </div>
-    </footer>
-    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+        <label class="online-control-form__input-lable-checkbox">
+          <input type="checkbox" class="online-control-form__checkbox">I agree to the processing of personal data</label>
+      </form>
+    </div>
+  </div>
+  <footer class="header-footer header-footer__footer">
+    <div class="container header-footer__container">
+      <a href="#" class="header-footer__logo">IC"REPAIR DESIGN PROJECT"</a>
+      <nav class="header-footer-nav">
+        <a href="#" class="header-footer-nav__item">Home</a>
+        <a href="#" class="header-footer-nav__item">Projects</a>
+        <a href="#" class="header-footer-nav__item">Measurement</a>
+        <a href="#" class="header-footer-nav__item">Team</a>
+        <a href="#" class="header-footer-nav__item">Reviews</a>
+        <a href="#" class="header-footer-nav__item">Contacts</a>
+      </nav>
+      <div class="header-footer-support-wrap">
+        <a href="#" class="header-footer__phone">+7 (928) 768-32-39</a>
+        <button class="button header-footer__button">Request a call</button>
+      </div>
+    </div>
+  </footer>
+  <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
 </html>
 

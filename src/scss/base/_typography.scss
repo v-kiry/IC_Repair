@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: $base-color;
+    font-family: $subtitle-font;
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: $title-font;
+    font-weight: normal;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 53px;
+}
+
+h2 {
+    font-size: 27px;
+    line-height: 37px;
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+h4 {
+    font-size: 15px;
+    line-height: 23px;
+}
+
+a {
+    font-family: $support-font;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+}
+
+button {
+    font-size: 13px;
+    line-height: 15px;
+}
