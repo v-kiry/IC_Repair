@@ -1,0 +1,37 @@
+.checkbox-form {
+  &__input[type=checkbox] {
+    display: none;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1.375;
+    color: $base-color;
+
+    &:focus {
+      transition: .2s;
+    }
+
+    &::before{
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      margin-right: 9px;
+      border-radius: 1px;
+      content: "\00a0";
+      text-align: center;
+      background: rgba(54, 54, 54, 0.2);
+    }
+
+    &:hover::before {
+      background: $second-color;
+    }
+  }
+
+  &__input:checked ~ &__text::before{
+    background: url("../assets/images/check.png") center no-repeat $second-color;
+  }
+}

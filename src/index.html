@@ -28,8 +28,8 @@
     </div>
   </header>
   <div class="banner">
-    <div class="banner-instagram">
-      <a href="#" class="banner-instagram__title">Instagram</a>
+    <div href = "#" tabindex="0"class="banner-instagram">
+      <a class="banner-instagram__title">Instagram</a>
     </div>
     <div class="banner-welcom">
       <div class="banner-welcom-wrap">
@@ -52,9 +52,13 @@
       <div class="online-control__img">
         <img src="<%=require('./assets/images/camera.png')%>" alt="Camera">
       </div>
-      <video src="#" class="online-control-palyer">
-        <div class="online-control-palyer__wrap"></div>
-      </video>
+      <div class="online-control-player">
+        <video src="#" class="online-control-player__video"></video>
+        <div class="online-control-player__curtain"></div>
+        <div class="online-control-player__play">
+          <img src="<%=require('./assets/images/play.png')%>" alt="Paly">
+        </div>
+      </div>
       <span class="online-control__subtitle">At each facility, a camera is installed that broadcasts the progress of work on the clock.
         At any time, you can go to our website and monitor the progress of work in your apartment.
         You can watch the live broadcast from one of our facilities!
@@ -67,8 +71,10 @@
             <input type="text" placeholder="Your phone number:" class="input online-control-form-wrap__input-phone"></label>
           <button class="button online-control-form-wrap__btn">Submit</button>
         </div>
-        <label class="online-control-form__input-lable-checkbox">
-          <input type="checkbox" class="online-control-form__checkbox">I agree to the processing of personal data</label>
+        <label tabindex="0" class="checkbox-form online-control-form__checkbox-lable">
+          <input type="checkbox" class="checkbox-form__input online-control-form__checkbox">
+          <span class="checkbox-form__text">I agree to the processing of personal data</span>
+        </label>
       </form>
     </div>
   </div>
