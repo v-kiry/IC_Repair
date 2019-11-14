@@ -1,7 +1,4 @@
 .offer-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
   max-width: 392px;
 
@@ -11,22 +8,43 @@
     background: grey;
   }
 
-  &__list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  &-list {
+    margin: auto;
     width: 100%;
     max-width: 330px;
     min-height: 286px;
     background: $paragraph-color;
     margin-top: -127px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+
+    &__title {
+      display: block;
+      width: 100%;
+      max-width: 228px;
+      padding-top: 25px;
+      margin: 0 auto 0 34px;
+      font-family: $title-font;
+      font-weight: normal;
+    }
+
+    &-marker {
+      width: 100%;
+      max-width: 267px;
+      margin: 13px auto 36px 34px;
+
+      &__item {
+        font-size: 15px;
+        line-height: 1.7;
+        color: #959595;
+     }
+    }
   }
 
   &__cost {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: auto;
     color: $paragraph-color;
     font-family: $title-font;
     font-size: 18px;

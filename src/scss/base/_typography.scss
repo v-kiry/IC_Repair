@@ -37,6 +37,11 @@ h4 {
     line-height: 1.5;
 }
 
+h5 {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
 a {
     font-family: $support-font;
     font-weight: normal;
@@ -50,11 +55,16 @@ li {
 }
 
 ul {
+    list-style-position: inside;
     margin: 0;
     padding: 0;
 }
 
 button {
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    background: none;
     font-size: 13px;
     line-height: 1.15;
 }
