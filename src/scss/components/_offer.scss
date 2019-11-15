@@ -2,10 +2,18 @@
   width: 100%;
   max-width: 392px;
 
-  &__img {
+  &-wrap {
+    position: relative;
     width: 100%;
     min-height: 421px;
     background: grey;
+    z-index: -1;
+
+    &__img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &-list {
@@ -29,7 +37,8 @@
     &-marker {
       width: 100%;
       max-width: 267px;
-      margin: 13px auto 36px 34px;
+      margin: 13px auto 0 34px;
+      padding-bottom: 50px;
 
       &__item {
         list-style: none;
