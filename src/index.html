@@ -63,14 +63,14 @@
         Leave a request below and you will receive a link to the broadcast.</span>
       <form action="" class="online-control-form">
         <div class="online-control-form-wrap">
-          <label class="input-lable online-control-form-wrap__input-lable-name">Name
-            <input type="text" placeholder="What is your name:"class="input online-control-form-wrap__input-name"></label>
-          <label class="input-lable online-control-form-wrap__input-lable-phone">Phone
-            <input type="text" placeholder="Your phone number:" class="input online-control-form-wrap__input-phone"></label>
+          <label class="input-form online-control-form-wrap__input-form">Name
+            <input type="text" placeholder="What is your name:" class="input-form__input online-control-form-wrap__input-form_name"></label>
+          <label class="input-form online-control-form-wrap__input-form">Phone
+            <input type="text" placeholder="Your phone number:" class="input-form__input online-control-form-wrap__input-form_phone"></label>
           <button class="button online-control-form-wrap__btn">Submit</button>
         </div>
-        <label class="checkbox-form online-control-form__checkbox-lable">
-          <input type="checkbox" class="checkbox-form__input online-control-form__checkbox">
+        <label class="checkbox-form online-control-form__checkbox-form">
+          <input type="checkbox" class="checkbox-form__input online-control-form__checkbox-form_input">
           <span class="checkbox-form__text">I agree to the processing of personal data</span>
         </label>
       </form>
@@ -138,6 +138,55 @@
               <span class="offer-item__cost">from 4000 rub / m2</span>
             </div>
       </div>
+    </div>
+  </div>
+  <div class="leave-request">
+    <div class="container leave-request__container">
+      <div class="leave-request-wrap">
+        <div class="leave-request-wrap__img">
+          <img src="<%=require('./assets/images/house.png')%>" alt="Hous">
+        </div>
+        <div class="point leave-request-wrap__point_one">
+          <div class="point__img leave-request-wrap__point_img">01</div>
+          <div class="point__text leave-request-wrap__point_text">Our specialist will arrive for measurements per day
+              contact, or appoint a date convenient for you</div>
+        </div>
+        <div class="point leave-request-wrap__point_two">
+            <div class="point__img leave-request-wrap__point_img">02</div>
+            <div class="point__text leave-request-wrap__point_text">Free metering</div>
+        </div>
+        <div class="point leave-request-wrap__point_three">
+            <div class="point__img leave-request-wrap__point_img">03</div>
+            <div class="point__text leave-request-wrap__point_text">Free consultation</div>
+        </div>
+        <div class="point leave-request-wrap__point_four">
+            <div class="point__img leave-request-wrap__point_img">04</div>
+            <div class="point__text leave-request-wrap__point_text">Get a cost estimate and
+                the timing of your future repairs</div>
+        </div>
+      </div>
+      <div class="leave-request-form-wrap">
+        <form action="" class="leave-request-form-wrap-form">
+          <h3 class="leave-request-form-wrap-form__title">Leave a request for free
+            departure of the measurer</h3>
+          <label class="input-form leave-request-form-wrap-form__input-form">Name
+            <input type="text" placeholder="What is your name:" class="input-form__input leave-request-form-wrap-form__input-form_item"></label>
+          <label class="input-form leave-request-form-wrap-form__input-form">Phone
+            <input type="text" placeholder="Your phone number:" class="input-form__input leave-request-form-wrap-form__input-form_item"></label>
+          <label class="input-form leave-request-form-wrap-form__input-form">Email
+            <input type="text" placeholder="Your email:" class="input-form__input leave-request-form-wrap-form__input-form_item"></label>
+          <label class="checkbox-form leave-request-form-wrap-form__checkbox-form">
+            <input type="checkbox" class="checkbox-form__input leave-request-form-wrap-form__checkbox-form_input">
+            <span class="checkbox-form__text leave-request-form-wrap-form__checkbox-form_text">I agree to the processing of personal data</span>
+          </label>
+          <button class="button leave-request-form-wrap-form__btn">Call the measurer</button>
+        </form>
+        <div class="leave-request-form-wrap-monybox">
+          <div class="leave-request-form-wrap-monybox__img"></div>
+          <span class="leave-request-form-wrap-monybox__text">Help save 10 - 20% of the cost of materials</span>
+        </div>
+      </div>
+
     </div>
   </div>
   <footer class="header-footer header-footer__footer">
