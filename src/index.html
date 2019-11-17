@@ -28,9 +28,9 @@
     </div>
   </header>
   <div class="banner">
-    <div href = "#" tabindex="0"class="banner-instagram">
+    <button href = "#" class="banner-instagram">
       <a class="banner-instagram__title">Instagram</a>
-    </div>
+    </button>
     <div class="banner-welcom">
       <div class="banner-welcom-wrap">
         <h1 class="banner-welcom-wrap__title">Turnkey Repair in the city of <span class="banner-welcom-wrap__text-decoration">Rostov-on-Don</span></h1>
@@ -41,10 +41,10 @@
         <button class="second-button banner-welcom-wrap__submit-btn">Submit your application</button>
       </div>
     </div>
-    <div href = "#" tabindex="0" class="banner-scroll-btn">
+    <button href = "#" class="banner-scroll-btn">
       <div class="banner-scroll-btn__title">Scroll down</div>
       <img class="banner-scroll-btn__img" src="<%=require('./assets/images/scrolldown.png')%>" alt="scrolldown"></img>
-    </div>
+    </button>
   </div>
   <div class="online-control">
     <div class="container online-control__container">
@@ -55,9 +55,7 @@
       <div class="online-control-player">
         <video src="#" class="online-control-player__video"></video>
         <div class="online-control-player__curtain"></div>
-        <div class="online-control-player__play">
-          <img src="<%=require('./assets/images/play.png')%>" alt="Paly">
-        </div>
+        <button class="online-control-player__play"></button>
       </div>
       <span class="online-control__subtitle">At each facility, a camera is installed that broadcasts the progress of work on the clock.
         At any time, you can go to our website and monitor the progress of work in your apartment.
@@ -71,11 +69,75 @@
             <input type="text" placeholder="Your phone number:" class="input online-control-form-wrap__input-phone"></label>
           <button class="button online-control-form-wrap__btn">Submit</button>
         </div>
-        <label tabindex="0" class="checkbox-form online-control-form__checkbox-lable">
+        <label class="checkbox-form online-control-form__checkbox-lable">
           <input type="checkbox" class="checkbox-form__input online-control-form__checkbox">
           <span class="checkbox-form__text">I agree to the processing of personal data</span>
         </label>
       </form>
+    </div>
+  </div>
+  <div class="types-of-repair">
+    <div class="container types-of-repair__container">
+      <h3 class="types-of-repair__title">Types of repair</h3>
+      <div class="types-of-repair__img">
+        <img src="<%=require('./assets/images/repair.png')%>" alt="Repair">
+      </div>
+      <div class="types-of-repair-info">
+        <div class="offer-item types-of-repair-info__offer-item">
+          <div class="offer-item-wrap">
+            <img class="offer-item-wrap__img" src="<%=require('./assets/images/item1.png')%>" alt="Redecorating">
+          </div>
+          <div class="offer-item-list">
+            <h5 class="offer-item-list__title">Redecorating</h5>
+            <ul class="offer-item-list-marker">
+              <li class="offer-item-list-marker__item">Dismantling of old coatings</li>
+              <li class="offer-item-list-marker__item">Wallpapering</li>
+              <li class="offer-item-list-marker__item">Painting walls and ceilings</li>
+              <li class="offer-item-list-marker__item">Laying flooring</li>
+              <li class="offer-item-list-marker__item">Replacing plumbing</li>
+              <li class="offer-item-list-marker__item">Replacing sockets and switches</li>
+              <li class="offer-item-list-marker__item">Replacing doors</li>
+            </ul>
+          </div>
+          <span class="offer-item__cost">from 900 rub / m2</span>
+        </div>
+        <div class="offer-item types-of-repair-info_offer-item">
+            <div class="offer-item-wrap">
+              <img class="offer-item-wrap__img" src="<%=require('./assets/images/item2.png')%>" alt="Overhaul">
+            </div>
+            <div class="offer-item-list">
+              <h5 class="offer-item-list__title">Redecorating</h5>
+              <ul class="offer-item-list-marker">
+                <li class="offer-item-list-marker__item">Dismantling of old coatings</li>
+                <li class="offer-item-list-marker__item">Wallpapering</li>
+                <li class="offer-item-list-marker__item">Painting walls and ceilings</li>
+                <li class="offer-item-list-marker__item">Laying flooring</li>
+                <li class="offer-item-list-marker__item">Replacing plumbing</li>
+                <li class="offer-item-list-marker__item">Replacing sockets and switches</li>
+                <li class="offer-item-list-marker__item">Replacing doors</li>
+              </ul>
+            </div>
+            <span class="offer-item__cost">from 1800 rub / m2</span>
+          </div>
+          <div class="offer-item types-of-repair-info_offer-item">
+              <div class="offer-item-wrap">
+                <img class="offer-item-wrap__img" src="<%=require('./assets/images/item3.png')%>" alt="Designer Repair">
+              </div>
+              <div class="offer-item-list">
+                <h5 class="offer-item-list__title">Designer Repair</h5>
+                <ul class="offer-item-list-marker">
+                  <li class="offer-item-list-marker__item">Dismantling of old coatings</li>
+                  <li class="offer-item-list-marker__item">Wallpapering</li>
+                  <li class="offer-item-list-marker__item">Painting walls and ceilings</li>
+                  <li class="offer-item-list-marker__item">Laying flooring</li>
+                  <li class="offer-item-list-marker__item">Replacing plumbing</li>
+                  <li class="offer-item-list-marker__item">Replacing sockets and switches</li>
+                  <li class="offer-item-list-marker__item">Replacing doors</li>
+                </ul>
+              </div>
+              <span class="offer-item__cost">from 4000 rub / m2</span>
+            </div>
+      </div>
     </div>
   </div>
   <footer class="header-footer header-footer__footer">

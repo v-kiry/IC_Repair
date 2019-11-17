@@ -1,23 +1,23 @@
 .online-control {
   &__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 857px;
   }
 
   &__title {
     font-family: $title-font;
     text-transform: uppercase;
+    text-align: center;
     margin-top: 20px;
   }
 
   &__img {
-    display: flex;
-    align-items: center;
-    margin: 13px 0 31px 0;
+    margin: 13px 0 31px;
+    text-align: center;
 
     &::after, &::before {
       content: '';
+      display: inline-block;
+      vertical-align: text-top;
       width: 32px;
       height: 2px;
       background-color: $second-color;
@@ -27,13 +27,14 @@
 
   &-player {
     position: relative;
-    min-width: 817px;
+    width: 100%;
     min-height: 434px;
 
     &__video {
       position: absolute;
       width: 100%;
       height: 100%;
+      z-index: 1;
     }
 
     &__curtain {
@@ -41,28 +42,30 @@
       width: 100%;
       height: 100%;
       background: rgba(0,0,0,0.5);
-      z-index: 1;
+      z-index: 2;
     }
 
     &__play {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background: url("../assets/images/play.png") no-repeat center;
+      width: 145px;
+      height: 145px;
       position: absolute;
-      width: 100%;
-      height: 100%;
-      z-index: 2;
+      top: 50%;
+      margin-top: -72.5px;
+      right: 50%;
+      margin-right: -72.5px;
+      z-index: 3;
     }
   }
 
   &__subtitle{
-    display: inline-block;
+    display: block;
     max-width: 681px;
     min-height: 131px;
     font-size: 20px;
     line-height: 1.7;
     text-align: center;
-    margin-bottom: 91px;
+    margin: 0 auto 91px;
 
     &::before{
       content: '';
@@ -82,13 +85,13 @@
     width: 100%;
     max-width: 769px;
     min-height: 102px;
-    margin-bottom: 148px;
+    margin: 0 auto 145px;
 
     &-wrap {
+      width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 100%;
 
         &__btn {
           width: 100%;
