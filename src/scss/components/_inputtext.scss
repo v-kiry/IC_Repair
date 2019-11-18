@@ -1,23 +1,22 @@
-.input {
-  &[type=text] {
+.input-form {
+  display: block;
+  font-size: 15px;
+  line-height: 20px;
+  color: rgba(54, 54, 54, 0.3);
+
+  &__input {
   border: none;
+  background: none;
   text-decoration: none;
   width: 100%;
-  max-width: 231px;
   min-height: 32px;
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
   font-size: 18px;
-  line-height: 24px;
+  line-height: 1.3;
   padding: 0;
 
     &::placeholder{
         color: $base-color;
     }
-  }
-
-  &-lable{
-    font-size: 15px;
-    line-height: 20px;
-    color: rgba(54, 54, 54, 0.3);
   }
 }
