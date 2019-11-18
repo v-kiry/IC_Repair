@@ -1,10 +1,13 @@
 import "./scss/main.scss";
-// import { tns } from "./node_modules/tiny-slider/src/tiny-slider";
 
-// var slider = tns({
-//   container: '.my-slider',
-//   items: 3,
-//   slideBy: 'page',
-//   autoplay: true
-// });
+var slider = tns({
+  container: '.projects-slider',
+  items: 1,
+  slideBy: 'page',
+  autoplay: false,
+  autoplayButtonOutput: false,
+  controlsContainer: ".projects-nav-menu",
+  navContainer: ".projects-nav-menu-points"
+
+});
 
