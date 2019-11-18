@@ -1,0 +1,10 @@
+.projects {
+  min-height: 1075px;
+  background: rgba($color: $base-color, $alpha: 0.98);
+
+  &__container {
+    margin: 0;
+    min-height: 545px;
+    
+  }
+}

@@ -1,4 +1,10 @@
 import "./scss/main.scss";
+// import { tns } from "./node_modules/tiny-slider/src/tiny-slider";
 
-console.log("hello, world");
-console.log("Hello, world 2");
+// var slider = tns({
+//   container: '.my-slider',
+//   items: 3,
+//   slideBy: 'page',
+//   autoplay: true
+// });
+
