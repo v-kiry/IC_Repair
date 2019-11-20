@@ -5,6 +5,9 @@ $(document).ready(function(){
     prevArrow: '.projects-nav-menu__prev',
     dotsClass: 'projects-nav-menu-wrap-points',
     appendDots: '.projects-nav-menu-wrap',
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
     customPaging : function(slider, i) {},
   });
   $('.projects-slider-item-wrap-slider-nested').slick({
@@ -23,7 +26,15 @@ $(document).ready(function(){
   $('.projects-slider').on('afterChange', function () {
     $('.projects-top-menu__item').removeClass('activ-menu');
     var indexSlide = $('.projects-slider').slick('slickCurrentSlide');
-    $('.projects-top-menu__item:eq('+indexSlide+')').attr('data-index')
     $('.projects-top-menu__item:eq('+indexSlide+')').addClass('activ-menu');
   })
+
+  $('.projects-top-menu__item').on('click', function(){
+    var index = $(this).attr('data-index')
+    $('.projects-slider').slick('slickGoTo', index);
+  })
+
+  $('.projects-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    console.log(nextSlide);
+  });
 });
