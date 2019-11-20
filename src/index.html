@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
-  <link rel = "stylesheet"  href =" https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
   <title>Document</title>
 </head>
 <body>
@@ -48,18 +47,15 @@
   </div>
   <div class="projects">
     <div class="container projects__container">
-      <div class="projects-nav-menu">
-        <button class="projects-nav-menu__prev"></button>
-        <div class="projects-nav-menu-points">
-          <div class="projects-nav-menu-points__item"></div>
-          <div class="projects-nav-menu-points__item"></div>
-          <div class="projects-nav-menu-points__item"></div>
-        </div>
-        <button class="projects-nav-menu__next"></button>
+      <div class="projects-top-menu">
+        <button class="projects-top-menu__item" >Rostov-on-Don, Admiral</button>
+        <button class="projects-top-menu__item">Sochi Thieves</button>
+        <button class="projects-top-menu__item">Rostov-on-Don Patriotic</button>
       </div>
       <div class="projects-slider">
         <div class="projects-slider-item">
           <div class="projects-slider-item-wrap">
+            <div class="projects-slider-item-wrap-project-paragraph">
             <div class="projects-slider-item-wrap-projects">
               <h2 class="projects-slider-item-wrap-projects__title">Completed projects</h2>
               <span class="projects-slider-item-wrap-projects__subtitle">Only a small part of the work performed by our company is presented on the site.
@@ -83,10 +79,20 @@
                 <span class="projects-slider-item-wrap-cost__subtitle">Upon request</span>
               </div>
             </div>
+            </div>
+            <div class="projects-slider-item-wrap-slider-nested">
+              <div class="projects-slider-item-wrap-slider-nested-item">
+                <img src="<%=require('./assets/images/slider_img.png')%>" alt="">
+              </div>
+              <div class="projects-slider-item-wrap-slider-nested-item">
+                <img src="<%=require('./assets/images/slider_img.png')%>" alt="">
+              </div>
+            </div>
           </div>
         </div>
         <div class="projects-slider-item">
           <div class="projects-slider-item-wrap">
+            <div class="projects-slider-item-wrap-project-paragraph">
             <div class="projects-slider-item-wrap-projects">
               <h2 class="projects-slider-item-wrap-projects__title">Completed projects</h2>
               <span class="projects-slider-item-wrap-projects__subtitle">Only a small part of the work performed by our company is presented on the site.
@@ -95,7 +101,7 @@
             <div class="projects-slider-item-wrap-paragraph">
               <div class="projects-slider-item-wrap-city">
                 <h5 class="projects-slider-item-wrap-city__title">City:</h5>
-                <span class="projects-slider-item-wrap-city__subtitle">RRRR</span>
+                <span class="projects-slider-item-wrap-city__subtitle">Sochi Thieves</span>
               </div>
               <div class="projects-slider-item-wrap-area">
                 <h5 class="projects-slider-item-wrap-area__title">Apartment area:</h5>
@@ -110,10 +116,20 @@
                 <span class="projects-slider-item-wrap-cost__subtitle">Upon request</span>
               </div>
             </div>
+            </div>
+            <div class="projects-slider-item-wrap-slider-nested">
+              <div class="projects-slider-item-wrap-slider-nested-item">
+                <img src="<%=require('./assets/images/slider_img.png')%>" alt="">
+              </div>
+              <div class="projects-slider-item-wrap-slider-nested-item">
+                <img src="<%=require('./assets/images/slider_img.png')%>" alt="">
+              </div>
+            </div>
           </div>
         </div>
         <div class="projects-slider-item">
           <div class="projects-slider-item-wrap">
+            <div class="projects-slider-item-wrap-project-paragraph">
             <div class="projects-slider-item-wrap-projects">
               <h2 class="projects-slider-item-wrap-projects__title">Completed projects</h2>
               <span class="projects-slider-item-wrap-projects__subtitle">Only a small part of the work performed by our company is presented on the site.
@@ -122,7 +138,7 @@
             <div class="projects-slider-item-wrap-paragraph">
               <div class="projects-slider-item-wrap-city">
                 <h5 class="projects-slider-item-wrap-city__title">City:</h5>
-                <span class="projects-slider-item-wrap-city__subtitle">KKKKKKK</span>
+                <span class="projects-slider-item-wrap-city__subtitle">Rostov-on-Don Patriotic</span>
               </div>
               <div class="projects-slider-item-wrap-area">
                 <h5 class="projects-slider-item-wrap-area__title">Apartment area:</h5>
@@ -137,8 +153,22 @@
                 <span class="projects-slider-item-wrap-cost__subtitle">Upon request</span>
               </div>
             </div>
+            </div>
+            <div class="projects-slider-item-wrap-slider-nested">
+              <div class="projects-slider-item-wrap-slider-nested-item">
+                <img src="<%=require('./assets/images/slider_img.png')%>" alt="">
+              </div>
+              <div class="projects-slider-item-wrap-slider-nested-item">
+                <img src="<%=require('./assets/images/slider_img.png')%>" alt="">
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+      <div class="projects-nav-menu">
+          <button class="projects-nav-menu__prev"></button>
+          <div class="projects-nav-menu-wrap"></div>
+          <button class="projects-nav-menu__next"></button>
       </div>
     </div>
   </div>
@@ -302,7 +332,7 @@
       </div>
     </div>
   </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script> -->
   <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
 </html>

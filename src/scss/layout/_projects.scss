@@ -3,8 +3,25 @@
   background: $base-color;
   overflow: auto;
 
+  &-top-menu {
+    display: flex;
+    justify-content: space-between;
+    max-width: 625px;
+    min-height: 25px;
+    margin-left: auto;
+    margin-right: 225px;
+    margin-bottom: 50px;
+    &__item {
+      color: rgba(255, 255, 255, 0.3);
+      font-family: $title-font;
+      font-size: 14px;
+      line-height: 1.35;
+      text-transform: uppercase;
+    }
+  }
+
   &__container {
-    margin: 110px 0 0 auto;
+    margin: 110px auto 0;
     padding-right: 0;
     max-width: 1360px;
     min-height: 475px;
@@ -12,7 +29,12 @@
 
   &-slider {
     &-item {
+      &:focus {
+        outline: none;
+      }
       &-wrap{
+        display: flex;
+        justify-content: space-between;
         color: $paragraph-color;
         max-width: 1360px;
         min-height: 475px;
@@ -123,6 +145,28 @@
           &__subtitle {
             font-size: 15px;
             line-height: 1.3;
+          }
+        }
+
+        &-slider-nested {
+          position: relative;
+          width: 100%;
+          max-width: 850px;
+          min-height: inherit;
+
+          &-item {
+            &__btn {
+              position: absolute;
+              z-index: 999;
+              width: 70px;
+              height: 70px;
+              background: url('../assets/images/slider_btn.png') no-repeat center center;
+              margin-top: -35.5%;
+              margin-left: 88%;
+            }
+            &:focus {
+              outline: none;
+            }
           }
         }
       }

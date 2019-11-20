@@ -1,9 +1,11 @@
 .online-control {
   &__container {
     max-width: 857px;
+    margin-top: -340px;
   }
 
   &__title {
+    color: white;
     font-family: $title-font;
     text-transform: uppercase;
     text-align: center;
@@ -35,6 +37,7 @@
       width: 100%;
       height: 100%;
       z-index: 1;
+      background: gray;
     }
 
     &__curtain {

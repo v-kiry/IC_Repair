@@ -1,10 +1,12 @@
 .projects-nav-menu {
+  position: relative;
+  z-index: 999;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   max-width: 205px;
-
+  margin-top: -14px;
   &__prev {
     width: 40px;
     height: 15px;
@@ -17,21 +19,31 @@
     background: url('../assets/images/next.png') no-repeat center center;
   }
 
-  &:focus {
-    outline: none;
-  }
-
-  &-points {
-    display: flex;
-    justify-content: space-between;
+  &-wrap {
     width: 100%;
     max-width: 60px;
 
-    &__item {
-      width: 10px;
-      height: 10px;
-      border-radius: 5px;
-      background: gray;
+    &-points {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style-type: none;
+
+      li {
+        display: flex;
+        align-items: center;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.3);
+      }
+      .slick-active {
+        background: $paragraph-color;
+      }
     }
   }
+}
+
+.slick-list {
+  padding-left: 0px!important;
 }
