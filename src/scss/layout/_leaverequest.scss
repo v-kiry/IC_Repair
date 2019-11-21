@@ -10,6 +10,13 @@
   }
 
   &-wrap {
+    &-point-block {
+      @include for-tablet-desktop-only{
+        width: 702px;
+        height: 501px;
+        margin-left: -120px;
+      }
+    }
     &__point_one {
       margin-top: -81.5%;
       margin-left: 50.7%;

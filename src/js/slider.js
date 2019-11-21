@@ -8,8 +8,9 @@ $(document).ready(function(){
     prevArrow: '.projects-nav-menu__prev',
     dotsClass: 'projects-nav-menu-wrap-points',
     appendDots: '.projects-nav-menu-wrap',
-    speed: 500,
+    speed: 2500,
     fade: true,
+    adaptiveHeight: true,
     customPaging : function(slider, i) {
     },
   });

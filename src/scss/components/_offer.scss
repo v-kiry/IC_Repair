@@ -1,6 +1,11 @@
 .offer-item {
   width: 100%;
   max-width: 392px;
+  margin-right: 10px;
+
+  &:last-child{
+    margin-right: 0;
+  }
 
   &-wrap {
     position: relative;
