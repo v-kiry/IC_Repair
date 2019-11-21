@@ -1,5 +1,8 @@
 $(document).ready(function(){
-  $('.projects-slider').slick({
+  var $slider = $('.projects-slider');
+  var $subSlider = $('.projects-slider-item-wrap-slider-nested');
+
+  $slider.slick({
     dots: true,
     nextArrow: '.projects-nav-menu__next',
     prevArrow: '.projects-nav-menu__prev',
@@ -7,34 +10,36 @@ $(document).ready(function(){
     appendDots: '.projects-nav-menu-wrap',
     speed: 500,
     fade: true,
-    cssEase: 'linear',
-    customPaging : function(slider, i) {},
+    customPaging : function(slider, i) {
+    },
   });
-  $('.projects-slider-item-wrap-slider-nested').slick({
+  $subSlider.slick({
     accessibility: false,
     centerMode: true,
     centerPadding: '150px',
     draggable: false,
     prevArrow: null,
     nextArrow: '<button class="projects-slider-item-wrap-slider-nested-item__btn" aria-label="Next" type="button"></button>',
+  }).on('beforeChange', function(event, slick){event.stopPropagation();});
+
+  $('.projects-slider-item').each(function(i, elem) {
+    $('<button>', {
+      class: 'projects-top-menu__item',
+      text: $(this).attr('data-content'),
+      'data-index': i,
+    }).appendTo('.projects-top-menu')
   });
 
-
-  var indexSlide = $('.projects-slider').slick('slickCurrentSlide');
+  var indexSlide = $slider.slick('slickCurrentSlide');
   $('.projects-top-menu__item:eq('+indexSlide+')').addClass('activ-menu');
 
-  $('.projects-slider').on('afterChange', function () {
+  $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
     $('.projects-top-menu__item').removeClass('activ-menu');
-    var indexSlide = $('.projects-slider').slick('slickCurrentSlide');
-    $('.projects-top-menu__item:eq('+indexSlide+')').addClass('activ-menu');
-  })
+    $('.projects-top-menu__item:eq('+nextSlide+')').addClass('activ-menu');
+  });
 
   $('.projects-top-menu__item').on('click', function(){
-    var index = $(this).attr('data-index')
-    $('.projects-slider').slick('slickGoTo', index);
-  })
-
-  $('.projects-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-    console.log(nextSlide);
+    var dataIndex = $(this).attr('data-index')
+    $('.projects-slider').slick('slickGoTo', dataIndex);
   });
 });
