@@ -1,28 +1,14 @@
-image: ruby:2.3
-
-cache:
-  paths:
-  - vendor/
-
-before_script:
-  - bundle install --path vendor
+image: node:13.0.1
 
 pages:
-  stage: deploy
+  cache:
+    paths:
+    - node_modules/
+
   script:
-  - bundle exec jekyll build -d public
+  - npm install
   artifacts:
     paths:
     - public
   only:
-  - master
-
-test:
-  stage: test
-  script:
-  - bundle exec jekyll build -d test
-  artifacts:
-    paths:
-    - test
-  except:
-  - master
+    - master
