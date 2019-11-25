@@ -2,6 +2,10 @@
   &__container {
     max-width: 857px;
     margin-top: -340px;
+
+    @include for-phone-only {
+      margin-top: -860px;
+    }
   }
 
   &__title {
@@ -10,11 +14,22 @@
     text-transform: uppercase;
     text-align: center;
     margin-top: 20px;
+
+    @include for-phone-only {
+      font-size: 22px;
+      line-height: 138.6%;
+      margin-top: 0;
+    }
   }
 
   &__img {
     margin: 13px 0 31px;
     text-align: center;
+
+    @include for-phone-only {
+      margin: 20px 0 40px;
+      text-align: center;
+    }
 
     &::after, &::before {
       content: '';
@@ -31,6 +46,10 @@
     position: relative;
     width: 100%;
     min-height: 434px;
+
+    @include for-phone-only {
+      min-height: 207px;
+    }
 
     &__video {
       position: absolute;
@@ -58,6 +77,10 @@
       right: 50%;
       margin-right: -72.5px;
       z-index: 3;
+
+      @include for-phone-only {
+        background: url("../assets/images/play_mini.png") no-repeat center;
+      }
     }
   }
 
@@ -70,6 +93,13 @@
     text-align: center;
     margin: 0 auto 91px;
 
+    @include for-phone-only {
+      color: $paragraph-color;
+      font-size: 14px;
+      line-height: 169.8%;
+      margin-bottom: 40px;
+    }
+
     &::before{
       content: '';
       display: block;
@@ -77,10 +107,14 @@
       height: 2px;
       background-color: $second-color;
       margin: 34px auto 62px;
+
+      @include for-phone-only {
+        margin: 30px auto 20px;
+      }
     }
   }
 
-  &-form{
+  &-form {
     display:flex;
     flex-direction: column;
     justify-content: space-between;
@@ -90,15 +124,72 @@
     min-height: 102px;
     margin: 0 auto 145px;
 
+    @include for-phone-only {
+      color: $paragraph-color;
+      align-items: flex-start;
+      max-width: 340px;
+    }
+
     &-wrap {
       width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
 
+      @include for-tablet-portait-only {
+        flex-wrap: wrap;
+        max-width: 400px;
+        margin-bottom: 40px;
+      }
+
+      @include for-phone-only {
+        flex-wrap: wrap;
+        max-width: 340px;
+      }
+
       &__input-form {
         width: 100%;
         max-width: 230px;
+
+        @include for-tablet-portait-only {
+          flex-wrap: wrap;
+          max-width: inherit;
+          margin-bottom: 40px;
+        }
+
+        @include for-phone-only {
+          color: rgba(255, 255, 255, 0.5);
+          flex-wrap: wrap;
+          max-width: inherit;
+        }
+
+        &_name {
+          @include for-phone-only {
+            color: $paragraph-color;
+            border-color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 63px;
+
+            &::placeholder {
+              color: $paragraph-color;
+              font-size: 18px;
+              line-height: 138.72%;
+            }
+          }
+        }
+
+        &_phone {
+          @include for-phone-only {
+            color: $paragraph-color;
+            border-color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 106px;
+
+            &::placeholder {
+              color: $paragraph-color;
+              font-size: 18px;
+              line-height: 138.72%;
+            }
+          }
+        }
       }
 
       &__btn {
@@ -107,12 +198,28 @@
         min-height: 51px;
         font-size: 15px;
         line-height: 1.73;
+
+        @include for-tablet-portait-only {
+          margin: auto;
+        }
+
+        @include for-phone-only {
+          margin: auto;
+          max-width: 340px;
+          border-radius: 0;
+        }
       }
 
       &__img {
         width: 100%;
         height: 482px;
         object-fit: cover;
+      }
+    }
+
+    @include for-phone-only {
+      &__checkbox-form {
+        margin-top: -130px;
       }
     }
   }

@@ -36,6 +36,14 @@
     justify-content: space-between;
     align-items: center;
 
+    @include for-tablet-landscape-only {
+      max-width: 450px;
+    }
+
+    @include for-tablet-portait-only {
+      display: none;
+    }
+
     &__item {
       color: $paragraph-color;
       font-size: 14px;
@@ -55,6 +63,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include for-tablet-landscape-only {
+      max-width: 161px;
+    }
   }
 
   &__phone{
@@ -62,11 +74,50 @@
     line-height: 16px;
     text-decoration-line: underline;
     color: $second-color;
+
+    @include for-tablet-landscape-only {
+      display: none;
+    }
+
+    @include for-tablet-portait-only {
+      color: $paragraph-color
+    }
   }
 
   &__button{
     width: 100%;
     max-width: 161px;
     min-height: 37px;
+  }
+
+  @include for-phone-only {
+
+    &__header {
+      min-height: 57px;
+    }
+
+    &__logo {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    &-nav {
+      display: none;
+    }
+
+    &-support-wrap {
+      max-width: 107px;
+    }
+
+    &__button {
+      display: none;
+    }
+
+    &__phone {
+      font-size: 12px;
+      line-height: 14px;
+      text-decoration-line: none;
+      color: $paragraph-color;
+    }
   }
 }

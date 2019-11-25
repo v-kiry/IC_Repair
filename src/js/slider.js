@@ -14,13 +14,29 @@ $(document).ready(function(){
     customPaging : function(slider, i) {
     },
   });
+
   $subSlider.slick({
     accessibility: false,
     centerMode: true,
     centerPadding: '150px',
     draggable: false,
+    swipe: false,
     prevArrow: null,
-    nextArrow: '<button class="projects-slider-item-wrap-slider-nested-item__btn" aria-label="Next" type="button"></button>',
+    nextArrow: '<button class="projects-slider-item-wrap__buttons-next"  aria-label="Next" type="button"></button>',
+    responsive: [{
+      breakpoint:900,
+      settings: {
+        centerMode: false,
+        centerPadding: '0px',
+      },
+      breakpoint:600,
+      settings: {
+        prevArrow: '<button class="projects-slider-item-wrap__buttons-prev"  aria-label="Previous" type="button"></button>',
+        centerMode: false,
+        centerPadding: '0px',
+      }
+
+    }]
   }).on('beforeChange', function(event, slick){event.stopPropagation();});
 
   $('.projects-slider-item').each(function(i, elem) {
