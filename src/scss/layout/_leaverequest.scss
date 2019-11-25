@@ -1,4 +1,8 @@
 .leave-request {
+  @include for-phone-only {
+    display: none;
+  }
+
   &__container {
     display: flex;
     justify-content:space-between;
@@ -7,9 +11,33 @@
     min-height: 725px;
     padding: 0 20px 0 0;
     margin-bottom: 130px;
+    @include for-tablet-landscape-only {
+      margin-bottom: 0;
+      padding:0
+    }
+
+    @include for-tablet-portait-only {
+      margin-bottom: 0;
+      padding: 0
+    }
   }
 
   &-wrap {
+    @include for-tablet-landscape-only {
+      display: none;
+    }
+
+    @include for-tablet-portait-only {
+      display: none;
+    }
+
+    &-point-block {
+      @include for-tablet-desktop-only{
+        width: 702px;
+        height: 501px;
+        margin-left: -120px;
+      }
+    }
     &__point_one {
       margin-top: -81.5%;
       margin-left: 50.7%;
@@ -32,6 +60,16 @@
     width: 100%;
     max-width: 510px;
     align-self: flex-end;
+
+    @include for-tablet-landscape-only {
+      align-self: center;
+      margin: auto;
+    }
+
+    @include for-tablet-portait-only {
+      align-self: center;
+      margin: auto;
+    }
 
     &-form {
       display: block;
@@ -87,6 +125,14 @@
       min-height: 72px;
       margin-left: 30px;
       margin-top: 40px;
+
+      @include for-tablet-landscape-only {
+        display: none;
+      }
+
+      @include for-tablet-portait-only {
+        display: none;
+      }
 
       &__img {
         display: inline-block;

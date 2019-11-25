@@ -1,4 +1,4 @@
 import "./scss/main.scss";
-
-console.log("hello, world");
-console.log("Hello, world 2");
+import 'slick-carousel/slick/slick.scss';
+import 'slick-carousel/slick/slick';
+import './js/slider';
