@@ -7,5 +7,5 @@ headerButton.onclick = function() {
 };
 
 closeButton.onclick = function() {
-  popupForm.classList.remove('active-popup')
+  popupForm.classList.toggle('active-popup')
 };
