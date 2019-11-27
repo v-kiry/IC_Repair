@@ -8,7 +8,7 @@ $(document).ready(function(){
     prevArrow: '.projects-nav-menu__prev',
     dotsClass: 'projects-nav-menu-wrap-points',
     appendDots: '.projects-nav-menu-wrap',
-    speed: 2500,
+    speed: 500,
     fade: true,
     adaptiveHeight: true,
     customPaging : function(slider, i) {
@@ -35,7 +35,6 @@ $(document).ready(function(){
         centerMode: false,
         centerPadding: '0px',
       }
-
     }]
   }).on('beforeChange', function(event, slick){event.stopPropagation();});
 

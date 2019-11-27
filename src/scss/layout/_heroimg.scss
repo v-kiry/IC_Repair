@@ -6,9 +6,6 @@
 
     &-instagram {
       background-color: $base-color;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       max-width: 82px;
       cursor: pointer;
 
@@ -22,16 +19,19 @@
       }
 
       &__title {
+        position: relative;
+        display: block;
         color: $second-color;
         font-family: $support-font;
         transform: rotate(90deg);
-        display: flex;
-        align-items: center;
         text-transform: uppercase;
 
         &::after{
           content: '';
-          vertical-align: middle;
+          position: absolute;
+          display: inline-block;
+          top:50%;
+          transform: translateY(-50%);
           width: 51px;
           height: 2px;
           background-color: $second-color;
@@ -44,7 +44,9 @@
       width: 100%;
       position: relative;
       min-height: inherit;
-      background: url(../assets/images/banner.png) no-repeat center center fixed;
+      background: url('../assets/images/banner.png');
+      background-position: center center;
+      background-repeat: no-repeat;
       background-size: cover;
       display: flex;
       align-items: center;
@@ -121,9 +123,11 @@
     &-scroll-btn {
       width: 100%;
       max-width: 247px;
+      height: 1px;
       min-height: 97px;
       position: absolute;
       bottom: -6.93%;
+      left:0;
       z-index: 2;
       color: $paragraph-color;
       background-color: $base-color;
@@ -144,6 +148,7 @@
         transition: .2s;
       }
     }
+
     @include for-phone-only {
       min-height: 475px;
 

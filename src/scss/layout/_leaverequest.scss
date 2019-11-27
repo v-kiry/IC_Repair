@@ -23,6 +23,17 @@
   }
 
   &-wrap {
+    position: relative;
+    height: 1px;
+    width: 100%;
+    max-width: 702px;
+    min-height: 650px;
+
+    &__img {
+      position: absolute;
+      z-index: -1;
+    }
+
     @include for-tablet-landscape-only {
       display: none;
     }
@@ -32,34 +43,65 @@
     }
 
     &-point-block {
+      position:absolute;
+      z-index:2;
+      width: 100%;
+      min-height: inherit;
+
       @include for-tablet-desktop-only{
         width: 702px;
         height: 501px;
         margin-left: -120px;
       }
+
+      &__point_one {
+        margin-top: 18.5%;
+        margin-left: 50.7%;
+        margin-bottom: 10.8%;
+      }
+      &__point_two {
+        margin-left: 61.4%;
+        margin-bottom: 18.6%;
+      }
+      &__point_three {
+        margin-left: 65%;
+        margin-bottom: 18.6%;
+      }
+      &__point_four{
+        margin-left: 55.7%;
+      }
     }
-    &__point_one {
-      margin-top: -81.5%;
-      margin-left: 50.7%;
-      margin-bottom: 10.8%;
-    }
-    &__point_two {
-      margin-left: 61.4%;
-      margin-bottom: 18.6%;
-    }
-    &__point_three {
-      margin-left: 65%;
-      margin-bottom: 18.6%;
-    }
-    &__point_four{
-      margin-left: 55.7%;
-    }
+  }
+
+  &-form--popup-form {
+    display: none;
+    position: fixed;
+    background: rgba($color: $paragraph-color, $alpha: 0.3);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 4;
+    opacity: 0;
+    transition: all 5s;
   }
 
   &-form-wrap {
     width: 100%;
     max-width: 510px;
-    align-self: flex-end;
+    margin-top: 115px;
+
+    &--popup {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      transform: translateY(-50%);
+      z-index: 9999;
+      opacity: 1;
+    }
 
     @include for-tablet-landscape-only {
       align-self: center;
@@ -78,7 +120,24 @@
       background: $base-color;
       color: $paragraph-color;
 
+      &__close-btn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 24px;
+        height: 24px;
+        background: url('../assets/images/close.png') no-repeat center;
+        margin-top: 14px;
+        margin-right: 14px;
+      }
+
       &__title {
+        &--popup-title {
+          max-width: 365px;
+          font-family: $title-font;
+          font-size: 19px;
+          line-height: 1.4;
+        }
         display: block;
         text-align: center;
         margin: auto;
@@ -156,4 +215,9 @@
       }
     }
   }
+}
+
+.active-popup {
+  display: block;
+  opacity: 1;
 }
