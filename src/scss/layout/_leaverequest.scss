@@ -75,7 +75,7 @@
   }
 
   &-form--popup-form {
-    display: none;
+    visibility: hidden;
     position: fixed;
     background: rgba($color: $paragraph-color, $alpha: 0.3);
     top: 0;
@@ -84,7 +84,7 @@
     left: 0;
     z-index: 4;
     opacity: 0;
-    transition: opacity 5s;
+    transition: 1s;
   }
 
   &-form-wrap {
@@ -111,8 +111,6 @@
       margin: auto;
       transform: translateY(-50%);
       z-index: 9999;
-      opacity: 0;
-      transition: opacity 5s;
       min-height: 510px;
 
       @include for-tablet-landscape-only {
@@ -231,6 +229,7 @@
 }
 
 .active-popup {
-  display: block;
+  visibility: visible;
   opacity: 1;
+  transition: opacity 1s;
 }

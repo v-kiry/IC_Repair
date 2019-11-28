@@ -1,7 +1,7 @@
-var headerButton = document.querySelectorAll('.header-footer__button')[0];
-var closeButton = document.querySelectorAll('.leave-request-form-wrap-form__close-btn')[0];
-console.log(headerButton)
-var  popupForm = document.querySelectorAll('.leave-request-form--popup-form')[0];
+var headerButton = document.querySelector('.header-footer__button');
+var closeButton = document.querySelector('.leave-request-form-wrap-form__close-btn');
+var  popupForm = document.querySelector('.leave-request-form--popup-form');
+
 
 headerButton.onclick = function() {
   popupForm.classList.add('active-popup')
@@ -11,3 +11,10 @@ closeButton.onclick = function() {
   popupForm.classList.toggle('active-popup')
   return false
 };
+
+popupForm.onclick =function(event) {
+  console.log(event.target.className)
+  if (event.target.className == popupForm.className) {
+    popupForm.classList.toggle('active-popup')
+  }
+}
