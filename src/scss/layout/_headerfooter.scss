@@ -1,4 +1,6 @@
 .header-footer {
+  position: relative;
+  z-index: 4;
   width: 100%;
   background-color: $base-color;
   overflow: auto;
@@ -71,6 +73,24 @@
     }
   }
 
+  &__burger {
+    display: none;
+    width: 30px;
+    height: 30px;
+
+    &-item {
+      width: inherit;
+      height: 2px;
+      background: $paragraph-color;
+      border-radius: 2px;
+
+      &:nth-child(2) {
+        margin-top: 12px;
+        margin-bottom: 12px;
+      }
+    }
+  }
+
   &__phone{
     font-size: 14px;
     line-height: 16px;
@@ -108,14 +128,19 @@
     }
 
     &-support-wrap {
-      max-width: 107px;
+      max-width: 30px;
     }
 
     &__button {
       display: none;
     }
 
+    &__burger {
+      display: block;
+    }
+
     &__phone {
+      display: none;
       font-size: 12px;
       line-height: 14px;
       text-decoration-line: none;
