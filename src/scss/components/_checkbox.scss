@@ -27,7 +27,6 @@
   }
 
   &__input:focus + &__text {
-    outline: $second-color solid 1px;
-    box-shadow: 0 0px 5px $second-color;
+    outline: -webkit-focus-ring-color auto 5px;
   }
 }

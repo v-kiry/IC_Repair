@@ -5,6 +5,9 @@
   position: relative;
 
     &-instagram {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background-color: $base-color;
       max-width: 82px;
       cursor: pointer;
@@ -20,7 +23,7 @@
 
       &__title {
         position: relative;
-        display: block;
+        display: inline-block;
         color: $second-color;
         font-family: $support-font;
         transform: rotate(90deg);
@@ -153,14 +156,15 @@
       min-height: 475px;
 
       &-instagram {
-        display: none;
+        max-width: 30px;
       }
 
       &-welcom {
         &-wrap {
           width: 100%;
           max-width: 340px;
-          margin: auto;
+          margin-left: 10px;
+          margin-right: 10px;
           margin-top: 85px;
 
           &__title {
@@ -169,7 +173,7 @@
           }
 
           &__subtitle {
-            width: 300px;
+            max-width: 300px;
             font-size: 18px;
             line-height: 135.84%;
           }

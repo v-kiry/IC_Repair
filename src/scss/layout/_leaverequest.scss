@@ -11,6 +11,7 @@
     min-height: 725px;
     padding: 0 20px 0 0;
     margin-bottom: 130px;
+
     @include for-tablet-landscape-only {
       margin-bottom: 0;
       padding:0
@@ -83,13 +84,23 @@
     left: 0;
     z-index: 4;
     opacity: 0;
-    transition: all 5s;
+    transition: opacity 5s;
   }
 
   &-form-wrap {
     width: 100%;
     max-width: 510px;
     margin-top: 115px;
+
+    @include for-tablet-landscape-only {
+      margin: auto;
+      margin-top: 95px;
+    }
+
+    @include for-tablet-portait-only {
+      margin: auto;
+      margin-top: 95px;
+    }
 
     &--popup {
       position: absolute;
@@ -100,17 +111,19 @@
       margin: auto;
       transform: translateY(-50%);
       z-index: 9999;
-      opacity: 1;
-    }
+      opacity: 0;
+      transition: opacity 5s;
+      min-height: 510px;
 
-    @include for-tablet-landscape-only {
-      align-self: center;
-      margin: auto;
-    }
+      @include for-tablet-landscape-only {
+        margin: auto;
+        margin-top: 0px;
+      }
 
-    @include for-tablet-portait-only {
-      align-self: center;
-      margin: auto;
+      @include for-tablet-portait-only {
+        margin: auto;
+        margin-top: 0px;
+      }
     }
 
     &-form {
