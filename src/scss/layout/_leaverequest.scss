@@ -113,6 +113,10 @@
       z-index: 9999;
       min-height: 510px;
 
+      @include for-phone-only {
+        max-width: 340px;
+      }
+
       @include for-tablet-landscape-only {
         margin: auto;
         margin-top: 0px;
@@ -131,6 +135,14 @@
       background: $base-color;
       color: $paragraph-color;
 
+      &--popup {
+        @include for-phone-only {
+          padding: 0 20px;
+          padding-bottom: 30px;
+          padding-top: 40px;
+        }
+      }
+
       &__close-btn {
         position: absolute;
         right: 0;
@@ -140,6 +152,10 @@
         background: url('../assets/images/close.png') no-repeat center;
         margin-top: 14px;
         margin-right: 14px;
+
+        @include for-phone-only {
+          background-size: 20px;
+        }
       }
 
       &__title {
@@ -148,6 +164,11 @@
           font-family: $title-font;
           font-size: 19px;
           line-height: 1.4;
+
+          @include for-phone-only {
+            font-size: 15px;
+            line-height: 138.6%;
+          }
         }
         display: block;
         text-align: center;
@@ -186,6 +207,11 @@
         max-width: 210px;
         min-height: 50px;
         margin-left: auto;
+
+        @include for-phone-only {
+          max-width: 100%;
+          margin-left: 0;
+        }
       }
     }
 

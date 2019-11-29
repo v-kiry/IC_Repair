@@ -11,6 +11,7 @@
 
   &-nav {
     width: 100%;
+    margin-bottom: 20px;
 
     &__item {
       width: 100%;
@@ -22,11 +23,30 @@
       line-height: 1.2;
       text-transform: uppercase;
 
+      &:last-child {
+        margin-top: 20px;
+        color: $second-color;
+
+        &:hover, &:focus {
+          text-decoration: underline;
+          transition: .2s;
+        }
+      }
+
       &:hover, &:focus {
         color:$second-color;
         transition: .2s;
       }
     }
+  }
+
+  &__button {
+    width: 100%;
+    min-height: 40px;
+    max-width: 150px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
   }
 }
 

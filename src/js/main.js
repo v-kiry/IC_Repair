@@ -1,9 +1,14 @@
 var headerButton = document.querySelector('.header-footer__button');
+var burgerPopupBtn = document.querySelector('.burger-menu__button');
 var closeButton = document.querySelector('.leave-request-form-wrap-form__close-btn');
 var popupForm = document.querySelector('.leave-request-form--popup-form');
 
 
 headerButton.onclick = function() {
+  popupForm.classList.add('active-popup')
+};
+
+burgerPopupBtn.onclick = function() {
   popupForm.classList.add('active-popup')
 };
 
