@@ -28,60 +28,62 @@
       </form>
     </div>
   </div>
-  <header class="header-footer header-footer__header">
-    <div class="container header-footer__container">
-      <a href="#" class="header-footer__logo">IC"REPAIR DESIGN PROJECT"</a>
-      <nav class="header-footer-nav">
-        <a href="#" class="header-footer-nav__item">Home</a>
-        <a href="#" class="header-footer-nav__item">Projects</a>
-        <a href="#" class="header-footer-nav__item">Measurement</a>
-        <a href="#" class="header-footer-nav__item">Team</a>
-        <a href="#" class="header-footer-nav__item">Reviews</a>
-        <a href="#" class="header-footer-nav__item">Contacts</a>
+  <div class="start-screen">
+    <header class="header-footer header-footer__header">
+      <div class="container header-footer__container">
+        <a href="#" class="header-footer__logo">IC"REPAIR DESIGN PROJECT"</a>
+        <nav class="header-footer-nav">
+          <a href="#" class="header-footer-nav__item">Home</a>
+          <a href="#" class="header-footer-nav__item">Projects</a>
+          <a href="#" class="header-footer-nav__item">Measurement</a>
+          <a href="#" class="header-footer-nav__item">Team</a>
+          <a href="#" class="header-footer-nav__item">Reviews</a>
+          <a href="#" class="header-footer-nav__item">Contacts</a>
+        </nav>
+        <div class="header-footer-support-wrap">
+          <button class="header-footer__burger">
+            <div class="header-footer__burger-item"></div>
+            <div class="header-footer__burger-item"></div>
+            <div class="header-footer__burger-item"></div>
+          </button>
+          <a href="#" class="header-footer__phone">+7 (928) 768-32-39</a>
+          <button class="button header-footer__button">Request a call</button>
+        </div>
+      </div>
+    </header>
+    <div class="burger-menu">
+      <nav class="burger-menu-nav">
+        <a href="#" class="burger-menu-nav__item">Home</a>
+        <a href="#" class="burger-menu-nav__item">Projects</a>
+        <a href="#" class="burger-menu-nav__item">Measurement</a>
+        <a href="#" class="burger-menu-nav__item">Team</a>
+        <a href="#" class="burger-menu-nav__item">Reviews</a>
+        <a href="#" class="burger-menu-nav__item">Contacts</a>
+        <a href="#" class="burger-menu-nav__item">+7 (928) 768-32-39</a>
       </nav>
-      <div class="header-footer-support-wrap">
-        <button class="header-footer__burger">
-          <div class="header-footer__burger-item"></div>
-          <div class="header-footer__burger-item"></div>
-          <div class="header-footer__burger-item"></div>
-        </button>
-        <a href="#" class="header-footer__phone">+7 (928) 768-32-39</a>
-        <button class="button header-footer__button">Request a call</button>
-      </div>
+      <button class="button burger-menu__button">Request a call</button>
     </div>
-  </header>
-  <div class="burger-menu">
-    <nav class="burger-menu-nav">
-      <a href="#" class="burger-menu-nav__item">Home</a>
-      <a href="#" class="burger-menu-nav__item">Projects</a>
-      <a href="#" class="burger-menu-nav__item">Measurement</a>
-      <a href="#" class="burger-menu-nav__item">Team</a>
-      <a href="#" class="burger-menu-nav__item">Reviews</a>
-      <a href="#" class="burger-menu-nav__item">Contacts</a>
-      <a href="#" class="burger-menu-nav__item">+7 (928) 768-32-39</a>
-    </nav>
-    <button class="button burger-menu__button">Request a call</button>
-  </div>
-  <div class="banner">
-    <button href = "#" class="banner-instagram">
-      <a class="banner-instagram__title">Instagram</a>
-    </button>
-    <div class="banner-welcom">
-      <div class="banner-welcom-wrap">
-        <h1 class="banner-welcom-wrap__title">Turnkey Repair in the city of <span class="banner-welcom-wrap__text-decoration">Rostov-on-Don</span></h1>
-        <span class="banner-welcom-wrap__subtitle">Get ready-made turnkey repairs on time
-            with work time saving up to 45 days and 20% from
-            cost of materials due to the organization of work</span>
-        <button class="button banner-welcom-wrap__calculate-btn">Calculate the cost</button>
-        <button class="second-button banner-welcom-wrap__submit-btn">Submit your application</button>
+    <div class="banner">
+      <button href = "#" class="banner-instagram">
+        <a class="banner-instagram__title">Instagram</a>
+      </button>
+      <div class="banner-welcom">
+        <div class="banner-welcom-wrap">
+          <h1 class="banner-welcom-wrap__title">Turnkey Repair in the city of <span class="banner-welcom-wrap__text-decoration">Rostov-on-Don</span></h1>
+          <span class="banner-welcom-wrap__subtitle">Get ready-made turnkey repairs on time
+              with work time saving up to 45 days and 20% from
+              cost of materials due to the organization of work</span>
+          <button class="button banner-welcom-wrap__calculate-btn">Calculate the cost</button>
+          <button class="second-button banner-welcom-wrap__submit-btn">Submit your application</button>
+        </div>
       </div>
+      <button class="banner-scroll-btn" onclick="document.location='#pr'">
+        <div class="banner-scroll-btn__title">Scroll down</div>
+        <img class="banner-scroll-btn__img" src="<%=require('./assets/images/scrolldown.png')%>" alt="scrolldown"/>
+      </button>
     </div>
-    <button href = "#" class="banner-scroll-btn">
-      <div class="banner-scroll-btn__title">Scroll down</div>
-      <img class="banner-scroll-btn__img" src="<%=require('./assets/images/scrolldown.png')%>" alt="scrolldown"/>
-    </button>
   </div>
-  <div class="projects">
+  <div id="pr" class="projects">
     <div class="container projects__container">
       <div class="projects-top-menu"></div>
       <div class="projects-slider">

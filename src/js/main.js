@@ -25,12 +25,19 @@ popupForm.onclick =function(event) {
 
 var burgerButton = document.querySelector('.header-footer__burger')
 var burgerMenu = document.querySelector('.burger-menu')
+var burgerElem = document.querySelectorAll('.header-footer__burger-item')
 
 document.onclick = function (event) {
-
-  if (event.target.className == burgerButton.className) {
+  if (event.target.className == (burgerButton.className || 'active-burger' || 'burger-active')) {
     burgerMenu.classList.toggle('burger-active')
+    burgerElem.forEach(function(item) {
+      item.classList.toggle('active-burger')
+    })
   } else if (event.target.className != burgerMenu.className) {
     burgerMenu.classList.remove('burger-active')
+    burgerElem.forEach(function(item) {
+      item.classList.remove('active-burger')
+    })
   }
 }
+

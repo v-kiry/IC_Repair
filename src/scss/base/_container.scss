@@ -5,3 +5,9 @@
   margin: auto;
   min-height: inherit;
 }
+
+.start-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

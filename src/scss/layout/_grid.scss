@@ -1,0 +1,15 @@
+.test {
+  // width: 100%;
+  // height: 100vh;
+  // background: brown;
+
+  &-b1 {
+    min-height: 150px;
+    background: yellowgreen;
+  }
+
+  &-b2 {
+    height: 100%;
+    background: cornflowerblue;
+  }
+}
