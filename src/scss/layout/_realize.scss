@@ -1,0 +1,125 @@
+.realize {
+  position: relative;
+  min-height: 865px;
+  background: url('../assets/images/backrealize.png') no-repeat center;
+  background-size: cover;
+  margin-bottom: 155px;
+  margin-top: 240px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background: rgba($color: $base-color, $alpha: 0.7);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 2;
+    max-width: 1440px;
+    padding: 0.1px 100px;
+  }
+
+  &__title {
+    display: block;
+    max-width: 250px;
+    color: $second-color;
+    margin-top: 140px;
+    margin-bottom: 50px;
+  }
+
+  &-types {
+    display: block;
+    max-width: 250px;
+    color: $paragraph-color;
+    font-size: 20px;
+    line-height: 1.7;
+    list-style-type: none;
+
+    &__item {
+      margin-bottom: 15px;
+      transition: .3s;
+      max-width: 160px;
+
+      &:hover, &:focus {
+        color: $second-color;
+
+        &::after {
+          content: '';
+          display: block;
+          background: $second-color;
+          height: 1px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__content-one {
+    position: absolute;
+    top: -42px;
+    right: 34.56%;
+    width: 100%;
+    max-width: 354px;
+    background: royalblue;
+    height: 558px;
+
+    &-img {
+      width: 100%;
+      height: inherit;
+      object-fit: cover;
+    }
+  }
+
+  &__content-two {
+    position: absolute;
+    top: -112px;
+    right: 6.95%;
+    width: 100%;
+    max-width: 354px;
+    background: royalblue;
+    height: 275px;
+
+    &-img {
+      width: 100%;
+      height: inherit;
+      object-fit: cover;
+    }
+  }
+
+  &__content-three {
+    position: absolute;
+    bottom: -42px;
+    right: 34.56%;
+    width: 100%;
+    max-width: 354px;
+    background: royalblue;
+    height: 350px;
+
+    &-img {
+      width: 100%;
+      height: inherit;
+      object-fit: cover;
+    }
+  }
+
+  &__content-four {
+    position: absolute;
+    bottom: 0;
+    right: 6.95%;
+    width: 100%;
+    max-width: 354px;
+    background: royalblue;
+    height: 625px;
+    margin-bottom: 40px;
+
+    &-img {
+      width: 100%;
+      height: inherit;
+      object-fit: cover;
+    }
+  }
+}
