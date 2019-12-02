@@ -1,43 +1,41 @@
-var headerButton = document.querySelector('.header-footer__button');
-var burgerPopupBtn = document.querySelector('.burger-menu__button');
-var closeButton = document.querySelector('.leave-request-form-wrap-form__close-btn');
-var popupForm = document.querySelector('.leave-request-form--popup-form');
+function main () {
+  const headerButton = document.querySelector('.header-footer__button');
+  const closeButton = document.querySelector('.leave-request-form-wrap-form__close-btn');
+  const popupForm = document.querySelector('.leave-request-form--popup-form');
 
 
-headerButton.onclick = function() {
-  popupForm.classList.add('active-popup')
-};
+  headerButton.onclick = () => {
+    popupForm.classList.add('active-popup')
+  };
 
-burgerPopupBtn.onclick = function() {
-  popupForm.classList.add('active-popup')
-};
-
-closeButton.onclick = function() {
-  popupForm.classList.remove('active-popup')
-  return false
-};
-
-popupForm.onclick =function(event) {
-  if (event.target.className == popupForm.className) {
+  closeButton.onclick = () => {
     popupForm.classList.remove('active-popup')
+    return false
+  };
+
+  popupForm.onclick = (event) => {
+    if (event.target.className == popupForm.className) {
+      popupForm.classList.remove('active-popup')
+    }
+  }
+
+  const burgerButton = document.querySelector('.header-footer__burger')
+  const burgerMenu = document.querySelector('.header-footer__container--popup')
+  const burgerElem = document.querySelectorAll('.header-footer__burger-item')
+
+  document.onclick = (event) => {
+    if (event.target.className == (burgerButton.className || 'active-burger' || 'active-burger-menu')) {
+      burgerMenu.classList.toggle('active-burger-menu')
+      burgerElem.forEach((item) => {
+        item.classList.toggle('active-burger')
+      })
+    } else if (event.target.className != burgerMenu.className) {
+      burgerMenu.classList.remove('active-burger-menu')
+      burgerElem.forEach((item) => {
+        item.classList.remove('active-burger')
+      })
+    }
   }
 }
 
-var burgerButton = document.querySelector('.header-footer__burger')
-var burgerMenu = document.querySelector('.burger-menu')
-var burgerElem = document.querySelectorAll('.header-footer__burger-item')
-
-document.onclick = function (event) {
-  if (event.target.className == (burgerButton.className || 'active-burger' || 'burger-active')) {
-    burgerMenu.classList.toggle('burger-active')
-    burgerElem.forEach(function(item) {
-      item.classList.toggle('active-burger')
-    })
-  } else if (event.target.className != burgerMenu.className) {
-    burgerMenu.classList.remove('burger-active')
-    burgerElem.forEach(function(item) {
-      item.classList.remove('active-burger')
-    })
-  }
-}
-
+main();
