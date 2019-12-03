@@ -36,6 +36,12 @@ function main () {
       })
     }
   }
-}
 
+  const scrollButton = document.querySelector('.banner-scroll-btn')
+
+  scrollButton.onclick = (event) => {
+    let block = event.target.dataset.scrollTo
+    document.querySelector('.' + block).scrollIntoView({ behavior: 'smooth'});
+  }
+}
 main();

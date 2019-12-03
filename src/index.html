@@ -70,13 +70,13 @@
           <button class="second-button banner-welcom-wrap__submit-btn">Submit your application</button>
         </div>
       </div>
-      <button class="banner-scroll-btn" onclick="document.location='#pr'">
+      <button class="banner-scroll-btn" data-scroll-to="projects">
         <div class="banner-scroll-btn__title">Scroll down</div>
         <img class="banner-scroll-btn__img" src="<%=require('./assets/images/scrolldown.png')%>" alt="scrolldown"/>
       </button>
     </div>
   </div>
-  <div id="pr" class="projects">
+  <div id="to" class="projects">
     <div class="container projects__container">
       <div class="projects-top-menu"></div>
       <div class="projects-slider">
@@ -347,28 +347,28 @@
     <div class="container realize__container">
       <h2 class="realize__title">We realize your wildest fantasies</h2>
       <ul class="realize-types">
-        <li class="realize-types__item">American classic</li>
-        <li class="realize-types__item">Empire</li>
-        <li class="realize-types__item">Classical</li>
-        <li class="realize-types__item">Loft</li>
-        <li class="realize-types__item">Minimalism</li>
-        <li class="realize-types__item">Provence</li>
-        <li class="realize-types__item">Romanticism</li>
-        <li class="realize-types__item">Scandinavian style</li>
-        <li class="realize-types__item">Mediterranean style</li>
-        <li class="realize-types__item">High tech</li>
-        <li class="realize-types__item">Eclecticism</li>
+        <li class="realize-types__item active-tab" data-type="american">American classic</li>
+        <li class="realize-types__item" data-type="empire">Empire</li>
+        <li class="realize-types__item" data-type="classical">Classical</li>
+        <li class="realize-types__item" data-type="loft">Loft</li>
+        <li class="realize-types__item" data-type="minimalism">Minimalism</li>
+        <li class="realize-types__item" data-type="provence">Provence</li>
+        <li class="realize-types__item" data-type="romanticism">Romanticism</li>
+        <li class="realize-types__item" data-type="scandinavian">Scandinavian style</li>
+        <li class="realize-types__item" data-type="mediterranean">Mediterranean style</li>
+        <li class="realize-types__item" data-type="tech">High tech</li>
+        <li class="realize-types__item" data-type="eclecticism">Eclecticism</li>
       </ul>
-      <div class="realize__content-one">
+      <div class="realize__content realize__content-one">
         <img src="<%=require('./assets/images/realizecontent1.png')%>" alt="" class="realize__content-one-img">
       </div>
-      <div class="realize__content-two">
+      <div class="realize__content realize__content-two">
         <img src="<%=require('./assets/images/realizecontent2.png')%>" alt="" class="realize__content-two-img">
       </div>
-      <div class="realize__content-three">
+      <div class="realize__content realize__content-three">
         <img src="<%=require('./assets/images/realizecontent3.png')%>" alt="" class="realize__content-three-img">
       </div>
-      <div class="realize__content-four">
+      <div class="realize__content realize__content-four">
         <img src="<%=require('./assets/images/realizecontent4.png')%>" alt="" class="realize__content-four-img">
       </div>
     </div>
