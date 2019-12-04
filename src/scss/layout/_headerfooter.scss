@@ -21,6 +21,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include for-tablet-portait-up {
+      height: 1px;
+    }
+
   }
 
   &__logo {

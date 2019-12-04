@@ -1,6 +1,12 @@
 $(document).ready(function(){
   var $slider = $('.projects-slider');
   var $subSlider = $('.projects-slider-item-wrap-slider-nested');
+  var $realizeSlider = $('.realize-slider');
+
+  $realizeSlider.slick({
+    nextArrow: '<button class="realize-slider__button realize-slider__button--next"  aria-label="Next" type="button"></button>',
+    prevArrow: '<button class="realize-slider__button realize-slider__button--prev"  aria-label="Previous" type="button"></button>',
+  })
 
   $slider.slick({
     dots: true,

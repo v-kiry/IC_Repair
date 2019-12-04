@@ -21,7 +21,7 @@ function main () {
 
   const burgerButton = document.querySelector('.header-footer__burger')
   const burgerMenu = document.querySelector('.header-footer__container--popup')
-  const burgerElem = document.querySelectorAll('.header-footer__burger-item')
+  const burgerElem = Array.from(document.querySelectorAll('.header-footer__burger-item'))
 
   document.onclick = (event) => {
     if (event.target.className == (burgerButton.className || 'active-burger' || 'active-burger-menu')) {
