@@ -1,8 +1,6 @@
 .realize {
   position: relative;
   min-height: 865px;
-  background: url('../assets/images/backrealize.png') no-repeat center;
-  background-size: cover;
   margin-bottom: 155px;
   margin-top: 240px;
   transition: all .3s;
@@ -59,68 +57,52 @@
     }
   }
 
-  &__content-one {
-    position: absolute;
-    top: -42px;
-    right: 34.56%;
-    width: 100%;
-    max-width: 354px;
-    background: royalblue;
-    height: 558px;
+  &__content {
+    background: $paragraph-color;
 
     &-img {
+      position: absolute;
       width: 100%;
-      height: inherit;
+      height: 100%;
       object-fit: cover;
+      transition: opacity 1s;
     }
-  }
 
-  &__content-two {
-    position: absolute;
-    top: -112px;
-    right: 6.95%;
-    width: 100%;
-    max-width: 354px;
-    background: royalblue;
-    height: 275px;
-
-    &-img {
+    &-one {
+      position: absolute;
+      top: -42px;
+      right: 34.56%;
       width: 100%;
-      height: inherit;
-      object-fit: cover;
+      max-width: 354px;
+      height: 558px;
     }
-  }
 
-  &__content-three {
-    position: absolute;
-    bottom: -42px;
-    right: 34.56%;
-    width: 100%;
-    max-width: 354px;
-    background: royalblue;
-    height: 350px;
-
-    &-img {
+    &-two {
+      position: absolute;
+      top: -112px;
+      right: 6.95%;
       width: 100%;
-      height: inherit;
-      object-fit: cover;
+      max-width: 354px;
+      height: 275px;
     }
-  }
 
-  &__content-four {
-    position: absolute;
-    bottom: 0;
-    right: 6.95%;
-    width: 100%;
-    max-width: 354px;
-    background: royalblue;
-    height: 625px;
-    margin-bottom: 40px;
-
-    &-img {
+    &-three {
+      position: absolute;
+      bottom: -42px;
+      right: 34.56%;
       width: 100%;
-      height: inherit;
-      object-fit: cover;
+      max-width: 354px;
+      height: 350px;
+    }
+
+    &-four {
+      position: absolute;
+      bottom: 0;
+      right: 6.95%;
+      width: 100%;
+      max-width: 354px;
+      height: 625px;
+      margin-bottom: 40px;
     }
   }
 }
