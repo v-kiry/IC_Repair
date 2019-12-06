@@ -34,11 +34,14 @@
       text-transform: uppercase;
     }
     .activ-menu{
+      position: relative;
       color: $second-color;
       &::after {
         content: '';
+        position: absolute;
         display: block;
         margin-top: 5px;
+        height: 1px;
         width: 100%;
         background-color: $second-color;
       }

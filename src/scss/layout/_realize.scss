@@ -1,9 +1,12 @@
 .realize {
   position: relative;
+  background-image: url('../assets/images/backrealize.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 865px;
   margin-bottom: 155px;
   margin-top: 240px;
-  transition: all .3s;
 
   @include for-tablet-portait-only {
     min-height: 510px;
@@ -35,9 +38,13 @@
 
   &__container {
     position: relative;
+    justify-content: space-between;
     z-index: 2;
     max-width: 1440px;
-    padding: 0.1px 6.95%;
+    padding-left: 6.95%;
+    padding-right: 6.95%;
+    display: flex;
+    align-items: center;
 
     @include for-tablet-portait-only {
       padding: 0.1px 20px;
@@ -95,11 +102,16 @@
     }
   }
 
+  &-types-block {
+    width: 100%;
+    max-width: 250px;
+    margin-right: 70px;
+  }
+
   &__title {
     display: block;
     max-width: 250px;
     color: $second-color;
-    margin-top: 140px;
     margin-bottom: 50px;
 
     @include for-tablet-portait-only {
@@ -135,6 +147,14 @@
     line-height: 1.7;
     list-style-type: none;
 
+    &-li-block {
+      margin-bottom: 23px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
     @include for-tablet-portait-only {
       display: none;
     }
@@ -144,16 +164,17 @@
     }
 
     &__item {
-      margin-bottom: 15px;
       transition: .3s;
       max-width: 160px;
     }
   }
 
   .active-tab {
+    position: relative;
     color: $second-color;
 
     &::after {
+      position: absolute;
       content: '';
       display: block;
       background: $second-color;
@@ -162,9 +183,52 @@
     }
   }
 
+  &-gallery {
+    position: relative;
+    display: none;
+    justify-content: space-between;
+    transition: opacity 1s;
+    width: 100%;
+    max-width: 751px;
+    min-height: inherit;
+
+    &-block {
+      position: relative;
+      width: 100%;
+      max-width: 354px;
+      min-height: inherit;
+
+      &:first-child {
+        margin-right: 43px;
+      }
+    }
+
+    &--active {
+      display: flex;
+      animation: fadeInFromNone 2s ease-out;
+    }
+    @keyframes fadeInFromNone {
+      0% {
+          display: none;
+          opacity: 0;
+      }
+
+      1% {
+          display: flex;
+          opacity: 0;
+      }
+
+      100% {
+          display: flex;
+          opacity: 1;
+      }
+    }
+  }
+
   &__content {
     background: $paragraph-color;
-    width: 25%;
+    width: 100%;
+    position: absolute;
 
     @include for-tablet-portait-only {
         display: none;
@@ -175,11 +239,9 @@
     }
 
     &-img {
-      position: absolute;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: opacity 1s;
 
       @include for-tablet-portait-only {
         display: none;
@@ -191,36 +253,27 @@
     }
 
     &-one {
-      position: absolute;
       top: -42px;
-      right: 34.56%;
       max-width: 354px;
       height: 558px;
     }
 
     &-two {
-      position: absolute;
-      top: -112px;
-      right: 6.95%;
+      top: -113px;
       max-width: 354px;
       height: 275px;
     }
 
     &-three {
-      position: absolute;
       bottom: -42px;
-      right: 34.56%;
       max-width: 354px;
       height: 350px;
     }
 
     &-four {
-      position: absolute;
-      bottom: 0;
-      right: 6.95%;
+      bottom: 40px;
       max-width: 354px;
       height: 625px;
-      margin-bottom: 40px;
     }
   }
 }

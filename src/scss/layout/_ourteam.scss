@@ -1,0 +1,13 @@
+.our-team {
+  &__container {
+    max-width: 1068px;
+    padding: 0 55px;
+  }
+
+  &-person-block {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+}

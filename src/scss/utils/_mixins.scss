@@ -13,6 +13,9 @@
 @mixin for-tablet-desktop-only {
   @media (min-width: 1200px) and (max-width: 1249px) { @content; }
 }
+@mixin for-desktop-only {
+  @media (min-width: 1250px) and (max-width: 1350px) { @content; }
+}
 @mixin for-desktop-up {
   @media (min-width: 1250px) { @content; }
 }

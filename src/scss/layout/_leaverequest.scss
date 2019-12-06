@@ -44,10 +44,13 @@
     }
 
     &-point-block {
-      position:absolute;
-      z-index:2;
-      width: 100%;
-      min-height: inherit;
+      max-width: 702px;
+      min-height: 501px;
+      margin-top: -40px;
+
+      @include for-desktop-only {
+        margin-left: -50px;
+      }
 
       @include for-tablet-desktop-only{
         width: 702px;
