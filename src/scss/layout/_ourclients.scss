@@ -1,11 +1,6 @@
-.our-team {
+.our-clients {
   &__container {
-    max-width: 1068px;
-    padding: 0 55px;
-  }
-
-  &__person {
-    margin: 0 40px;
+    max-width: 1276px;
   }
 
   &__title {
@@ -48,45 +43,25 @@
     line-height: 1.7;
     text-align: center;
     margin: 0 auto;
-
-    &--up {
-      max-width: 460px;
-      margin-bottom: 40px;
-      line-height: 1.35;
-    }
-
-    &--down {
-      max-width: 558px;
-      margin-bottom: 90px;
-
-      &::before {
-        content: '';
-        display: block;
-        width: 55px;
-        height: 2px;
-        background-color: $second-color;
-        margin: 0 auto 20px;
-      }
-    }
+    max-width: 360px;
+    margin-bottom: 40px;
+    line-height: 1.35;
   }
 
-  &-person-block {
+  &-block {
+    width: 100%;
+    min-height: 455px;
     display: flex;
     justify-content: space-between;
-    align-content: center;
     flex-wrap: wrap;
-    margin-bottom: 55px;
-  }
+    margin-bottom: 160px;
 
-  &__icon-project {
-    background-image: url('../assets/images/idea.png');
-  }
+    @include for-tablet-portait-up {
+      justify-content: space-around;
+    }
 
-  &__icon-designer {
-    background-image: url('../assets/images/pen.png');
-  }
-
-  &__icon-foreman {
-    background-image: url('../assets/images/portfolio.png');
+    @include for-desktop-up {
+      justify-content: space-between;
+    }
   }
 }

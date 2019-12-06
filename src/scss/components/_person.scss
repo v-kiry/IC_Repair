@@ -3,10 +3,15 @@
   min-height: 415px;
   margin-bottom: 55px;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   &__icon {
     margin-bottom: -35px;
     margin-left: -35px;
-    background: url('../assets/images/idea.png') no-repeat center;
+    background-position: center;
+    background-repeat: no-repeat;
     background-color: $second-color;
     width: 70px;
     height: 70px;

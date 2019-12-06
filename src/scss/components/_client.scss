@@ -1,0 +1,105 @@
+.client {
+  margin-right: 20px;
+  margin-bottom: 50px;
+
+  @include for-tablet-portait-up {
+    margin-right: 0;
+  }
+
+  @include for-tablet-landscape-up {
+    margin-right: 20px;
+  }
+
+  &:last-child{
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  &-info {
+    max-width: 376px;
+    min-height: 428px;
+    background: $paragraph-color;
+    padding-left: 20px;
+    padding-top: 25px;
+    padding-right: 31px;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+  }
+
+  &-block {
+    display: flex;
+    align-items: center;
+  }
+
+  &__avatar {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 76px;
+    min-height: 76px;
+    border-radius: 50%;
+    background: cornflowerblue;
+    margin-right: 25px;
+
+    &-img {
+      position: absolute;
+      display: block;
+      width: 100%;
+      min-height:inherit;
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    max-width: 178px;
+  }
+
+  &__comment {
+    display: block;
+    max-width: 325px;
+    min-height: 221px;
+    font-size: 15px;
+    line-height: 180%;
+    color: #959595;
+    margin-top: 25px;
+  }
+
+  &-work-info {
+    display: flex;
+    align-items: center;
+    max-width: 294px;
+    min-height: 54px;
+    background: $second-color;
+    margin-top: -27px;
+    padding-left: 15px;
+
+    &__size {
+      color: $paragraph-color;
+      display: block;
+      font-family: $title-font;
+      font-size: 17px;
+      line-height: 24px;
+    }
+
+    &__days {
+      color: $paragraph-color;
+      display: block;
+      font-family: $title-font;
+      font-size: 17px;
+      line-height: 24px;
+    }
+
+    &__img {
+      height: 32px;
+      width: 34px;
+      display: block;
+      margin-right: 10px;
+    }
+
+    &__delimiter {
+      background: $paragraph-color;
+      min-height: inherit;
+      width: 1px;
+      margin: 0 15px;
+    }
+  }
+}

@@ -9,7 +9,7 @@
   }
 
   &__title {
-    color: white;
+    color: $paragraph-color;
     font-family: $title-font;
     text-transform: uppercase;
     text-align: center;
@@ -84,7 +84,7 @@
     }
   }
 
-  &__subtitle{
+  &__subtitle {
     display: block;
     max-width: 681px;
     min-height: 131px;
