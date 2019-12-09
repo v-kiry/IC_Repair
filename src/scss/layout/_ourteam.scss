@@ -2,10 +2,22 @@
   &__container {
     max-width: 1068px;
     padding: 0 55px;
+
+    @include for-phone-only {
+      padding: 0 15px 0 45px;
+    }
   }
 
   &__person {
     margin: 0 40px;
+
+    @include for-tablet-portait-only {
+      margin: 0 0 55px;
+    }
+
+    @include for-phone-only {
+      margin: 0 0 55px;
+    }
   }
 
   &__title {
@@ -26,11 +38,6 @@
     margin: 13px 0 25px;
     text-align: center;
 
-    @include for-phone-only {
-      margin: 20px 0 40px;
-      text-align: center;
-    }
-
     &::after, &::before {
       content: '';
       display: inline-block;
@@ -49,15 +56,28 @@
     text-align: center;
     margin: 0 auto;
 
+    @include for-phone-only {
+      font-size: 15px;
+      line-height: 135.84%;
+    }
+
     &--up {
       max-width: 460px;
       margin-bottom: 40px;
       line-height: 1.35;
+
+      @include for-phone-only {
+        line-height: 135.84%;
+      }
     }
 
     &--down {
       max-width: 558px;
       margin-bottom: 90px;
+
+      @include for-phone-only {
+        display: none;
+      }
 
       &::before {
         content: '';
@@ -74,8 +94,19 @@
     display: flex;
     justify-content: space-between;
     align-content: center;
-    flex-wrap: wrap;
     margin-bottom: 55px;
+
+    @include for-tablet-portait-only {
+      max-width: 275px;
+      flex-wrap: wrap;
+      margin: auto;
+    }
+
+    @include for-phone-only {
+      max-width: 305px;
+      flex-wrap: wrap;
+      margin: auto;
+    }
   }
 
   &__icon-project {
