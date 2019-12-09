@@ -1,10 +1,15 @@
 .online-control {
+  @include for-phone-only {
+    margin-bottom: 60px;
+  }
+
   &__container {
     max-width: 857px;
     margin-top: -340px;
 
     @include for-phone-only {
-      margin-top: -860px;
+      margin-top: 0;
+      background: $base-color;
     }
   }
 
@@ -97,7 +102,7 @@
       color: $paragraph-color;
       font-size: 14px;
       line-height: 169.8%;
-      margin-bottom: 40px;
+      margin-bottom: -40px;
     }
 
     &::before{
@@ -128,6 +133,8 @@
       color: $paragraph-color;
       align-items: flex-start;
       max-width: 340px;
+      margin: 0 auto;
+      transform: translateY(85px);
     }
 
     &-wrap {
@@ -154,7 +161,7 @@
         @include for-tablet-portait-only {
           flex-wrap: wrap;
           max-width: inherit;
-          margin-bottom: 40px;
+          margin-bottom: -40px;
         }
 
         @include for-phone-only {
@@ -223,7 +230,11 @@
 
     @include for-phone-only {
       &__checkbox-form {
-        margin-top: -130px;
+        transform:translateY(-160px);
+
+        &_text {
+          font-size: 14px;
+        }
       }
     }
   }

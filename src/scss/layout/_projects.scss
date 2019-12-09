@@ -297,7 +297,7 @@
   }
 
   @include for-phone-only {
-    min-height: 1553px;
+    min-height: 475px;
 
     &-top-menu {
       display: none;
@@ -307,7 +307,7 @@
       padding-right: 20px;
       max-width: 1380px;
       margin-top: 40px;
-      margin-bottom: 920px;
+      margin-bottom: 60px;
     }
 
     &__item {
@@ -351,10 +351,6 @@
           font-size: 14px;
           line-height: 158.48%;
         }
-      }
-
-      &-paragraph {
-        
       }
 
       &-city {

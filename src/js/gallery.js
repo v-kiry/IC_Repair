@@ -14,6 +14,7 @@ function gallery() {
         document.querySelector('.realize').setAttribute('style', 'background-image: url('+src+');')
       }
     })
+    $('.realize-slider').slick('refresh');
   }
 
   Array.from(document.querySelectorAll('.realize-types__item')).forEach((elem) => {

@@ -16,6 +16,7 @@
 
   @include for-phone-only {
     min-height: 242px;
+    margin-bottom: 70px;
     margin-top: 90px;
     background-image: none !important;
   }
@@ -74,15 +75,15 @@
 
     &__item {
       width: 100%;
-      min-height: 510px;
+      height: 510px;
 
       @include for-phone-only {
-        min-height: 242px;
+        height: 242px;
       }
 
       &-img {
         width: 100%;
-        min-height: inherit;
+        height: inherit;
         object-fit: cover;
       }
     }
