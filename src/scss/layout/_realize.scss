@@ -11,11 +11,13 @@
   @include for-tablet-portait-only {
     min-height: 510px;
     margin-top: 110px;
+    background-image: none !important;
   }
 
   @include for-phone-only {
     min-height: 242px;
     margin-top: 90px;
+    background-image: none !important;
   }
 
   &::after {
@@ -47,11 +49,13 @@
     align-items: center;
 
     @include for-tablet-portait-only {
-      padding: 0.1px 20px;
+      display: block;
+      padding:0 20px;
     }
 
     @include for-phone-only {
-      padding: 0.1px 20px;
+      display: block;
+      padding: 0px 20px;
     }
   }
 
@@ -106,6 +110,15 @@
     width: 100%;
     max-width: 250px;
     margin-right: 70px;
+
+    @include for-tablet-portait-only {
+      max-width: 100%;
+      margin-right: 0;
+    }
+    @include for-phone-only {
+      max-width: 100%;
+      margin-right: 0;
+    }
   }
 
   &__title {
@@ -141,26 +154,45 @@
 
   &-types {
     display: block;
-    max-width: 250px;
+    max-width: inherit;
     color: $paragraph-color;
     font-size: 20px;
     line-height: 1.7;
     list-style-type: none;
 
+    @include for-tablet-portait-only {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      font-size: 13px;
+      line-height: 169.8%;
+      color: $base-color;
+    }
+    @include for-phone-only {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      font-size: 13px;
+      line-height: 169.8%;
+      color: $base-color;
+    }
+
     &-li-block {
       margin-bottom: 23px;
 
+      @include for-tablet-portait-only {
+        margin-right: 15px;
+        margin-bottom: 15px;
+      }
+      @include for-phone-only {
+        margin-right: 15px;
+        margin-bottom: 15px;
+      }
+
       &:last-child {
+        margin-right: 0;
         margin-bottom: 0;
       }
-    }
-
-    @include for-tablet-portait-only {
-      display: none;
-    }
-
-    @include for-phone-only {
-      display: none;
     }
 
     &__item {
@@ -198,7 +230,14 @@
       max-width: 354px;
       min-height: inherit;
 
-      &:first-child {
+      @include for-tablet-portait-only {
+        display: none;
+      }
+      @include for-phone-only {
+        display: none;
+      }
+
+      &--first {
         margin-right: 43px;
       }
     }
@@ -206,7 +245,10 @@
     &--active {
       display: flex;
       animation: fadeInFromNone 2s ease-out;
+      margin-left: auto;
+      margin-right: auto;
     }
+
     @keyframes fadeInFromNone {
       0% {
           display: none;
