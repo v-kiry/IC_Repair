@@ -1,12 +1,22 @@
 $(document).ready(function(){
   var $slider = $('.projects-slider');
   var $subSlider = $('.projects-slider-item-wrap-slider-nested');
-  var $realizeSlider = $('.realize-slider');
+  var $realizeSlider = $('.realize-gallery');
+
+  console.log($realizeSlider)
 
   $realizeSlider.slick({
     nextArrow: '<button class="realize-slider__button realize-slider__button--next"  aria-label="Next" type="button"></button>',
     prevArrow: '<button class="realize-slider__button realize-slider__button--prev"  aria-label="Previous" type="button"></button>',
-  })
+    mobileFirst: true,
+    responsive: [{
+        breakpoint: 900,
+        settings: "unslick"
+      }]
+  });
+
+
+
 
   $slider.slick({
     dots: true,

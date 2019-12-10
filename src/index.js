@@ -4,3 +4,4 @@ import 'slick-carousel/slick/slick';
 import './js/slider';
 import './js/main';
 import './js/gallery';
+import './js/realizeslider';
