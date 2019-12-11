@@ -3,8 +3,6 @@ $(document).ready(function(){
   var $subSlider = $('.projects-slider-item-wrap-slider-nested');
   var $realizeSlider = $('.realize-gallery');
 
-  console.log($realizeSlider)
-
   $realizeSlider.slick({
     nextArrow: '<button class="realize-slider__button realize-slider__button--next"  aria-label="Next" type="button"></button>',
     prevArrow: '<button class="realize-slider__button realize-slider__button--prev"  aria-label="Previous" type="button"></button>',
@@ -15,7 +13,11 @@ $(document).ready(function(){
       }]
   });
 
-
+  $(window).on('resize orientationchange', function() {
+    if (window.innerWidth <= 900) {
+      $('.realize-gallery').slick('init');
+    }
+  });
 
 
   $slider.slick({

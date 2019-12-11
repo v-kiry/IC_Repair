@@ -198,20 +198,9 @@
     max-width: 751px;
     min-height: inherit;
 
-    .slick-track {
-      width: 100px;
-    }
-
-    &-block {
-      position: relative;
-      width: 100%;
-      max-width: 354px;
-      min-height: inherit;
-
-      &--first {
-        margin-right: 43px;
-      }
-    }
+    // .slick-track {
+    //   width: 100px;
+    // }
 
     &--active {
       display: flex !important;
@@ -240,7 +229,7 @@
 
   &__content {
     background: $paragraph-color;
-    width: 100%;
+    width: 48%;
     position: absolute;
 
     &-img {
@@ -259,7 +248,7 @@
       @include for-phone-only {
         position: static;
         max-width: initial !important;
-        height: 558px !important;
+        height: 242px !important;
       }
     }
 
@@ -271,6 +260,7 @@
 
     &-two {
       top: -113px;
+      right: 0;
       max-width: 354px;
       height: 275px;
     }
@@ -283,6 +273,7 @@
 
     &-four {
       bottom: 40px;
+      right: 0;
       max-width: 354px;
       height: 625px;
     }

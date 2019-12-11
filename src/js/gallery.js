@@ -11,6 +11,7 @@ function gallery() {
 
       if (elem.dataset.typeImg == block) {
         elem.classList.add('realize-gallery--active')
+        $('.realize-gallery--active').slick('refresh')
         let src = elem.querySelector('.realize__content-one-img').getAttribute('src')
         document.querySelector('.realize').setAttribute('style', 'background-image: url('+src+');')
       }
