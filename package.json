@@ -40,6 +40,7 @@
     "webpack-md5-hash": "0.0.6"
   },
   "dependencies": {
+    "object-fit-polyfill": "^0.1.0",
     "postcss-cli": "^6.1.3"
   }
 }

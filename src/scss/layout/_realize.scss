@@ -192,18 +192,13 @@
   &-gallery {
     position: relative;
     display: none !important;
-    justify-content: space-between;
     transition: opacity 1s;
     width: 100%;
     max-width: 751px;
     min-height: inherit;
 
-    // .slick-track {
-    //   width: 100px;
-    // }
-
     &--active {
-      display: flex !important;
+      display: block !important;
       animation: fadeInFromNone 2s ease-out;
       margin-left: auto;
       margin-right: auto;
@@ -216,12 +211,12 @@
       }
 
       1% {
-          display: flex;
+          display: block;
           opacity: 0;
       }
 
       100% {
-          display: flex;
+          display: block;
           opacity: 1;
       }
     }

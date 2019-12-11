@@ -5,3 +5,4 @@ import './js/slider';
 import './js/main';
 import './js/gallery';
 import './js/realizeslider';
+import 'object-fit-polyfill/dist/object-fit-polyfill'
